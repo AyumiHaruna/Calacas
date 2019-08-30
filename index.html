@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+
+        <link rel="stylesheet" href="css/style.css">        
+
+        <title>Alas y Raices</title>
+            
+    </head>
+    <body>        
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md justify-content-md-center justify-content-start">            
+            <a class="navbar-brand d-md-none d-inline" href="">
+                <img src="img/ayr1.png" class="d-inline-block align-top" alt="Logo alas y raices" width="80" height="80">           
+            </a>
+
+            <button class="navbar-toggler navbar-dark ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>            
+            <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+                <ul class="navbar-nav mx-auto text-md-center text-center">
+                    <li class="nav-item nav-link-text">
+                        <a class="nav-link" href="#">NOSOTROS</a> 
+                    </li>
+                    <li class="nav-item nav-link-text">
+                        <a class="nav-link" href="#">APLICACIONES</a>
+                    </li>
+                    <li class="nav-item my-auto mobile-hidden">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/ayr1.png" class="d-inline-block align-top" alt="Logo alas y raices">                            
+                        </a>    
+                    </li>
+                    <li class="nav-item nav-link-text">
+                        <a class="nav-link" href="#">E-BOOKS</a> 
+                    </li>
+                    <li class="nav-item nav-link-text">
+                        <a class="nav-link" href="#"><span>MEXICO</span>ES<span>CULTURA</span></a> 
+                    </li>
+                    <li class="nav-item nav-link-text web-hidden">
+                        <button type="button" class="btn btn-circle social-btn"><a href="https://www.facebook.com/alasyraicescultura/"><i class="fab fa-lg fa-facebook-f"></i></a></button>
+                        <button type="button" class="btn btn-circle social-btn"><a href="https://twitter.com/alasyraices"><i class="fab fa-lg fa-twitter"></i></a></button>
+                        <button type="button" class="btn btn-circle social-btn"><a href="https://www.instagram.com/alasyraicescultura/"><i class="fab fa-lg fa-instagram"></i></a></button>
+                    </li>
+                </ul>   
+            </div>      
+        </nav>
+        <div class="social-nav">
+            <button type="button" class="btn btn-circle social-btn"><a href="https://www.facebook.com/alasyraicescultura/"><i class="fab fa-lg fa-facebook-f"></i></a></button>
+            <button type="button" class="btn btn-circle social-btn"><a href="https://twitter.com/alasyraices"><i class="fab fa-lg fa-twitter"></i></a></button>
+            <button type="button" class="btn btn-circle social-btn"><a href="https://www.instagram.com/alasyraicescultura/"><i class="fab fa-lg fa-instagram"></i></a></button>
+        </div>
+
+        
+        <div class="container-fluid">
+
+            <!-- age button block -->
+            <div class="row age-button-block">
+                <div class="col-md-12 age-background">
+                    
+                </div>
+
+                <div class="col-md-12 age-btn-container-block">
+                    <div class="row">
+                        <div class="col-md-4 age-btn-container">
+                            <img src="img/babyBtn0.png" class="age-btn" id="btnInfancia1" data-age_class="baby" data-status="0" onClick="ageBtnClicked(this.id)" onmouseenter="ageBtnInOut(this.id, 'in')" onmouseleave="ageBtnInOut(this.id, 'out')" alt="">
+                        </div>
+                        <div class="col-md-4 age-btn-container">
+                            <img src="img/kidBtn0.png" class="age-btn" id="btnInfancia2" data-age_class="kid" data-status="0" onClick="ageBtnClicked(this.id)" onmouseenter="ageBtnInOut(this.id, 'in')" onmouseleave="ageBtnInOut(this.id, 'out')" alt="">
+                        </div>
+                        <div class="col-md-4 age-btn-container">
+                            <img src="img/youngBtn0.png" class="age-btn" id="btnInfancia3" data-age_class="young" data-status="0" onClick="ageBtnClicked(this.id)" onmouseenter="ageBtnInOut(this.id, 'in')" onmouseleave="ageBtnInOut(this.id, 'out')" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 2nd button block -->
+            <div class="row">
+                <div class="col-12 text-center collapsibleBtnTrigger" id="collapsibleBtnTrigger">
+                    <img src="img/dropMenuBtnDown.png" id="collapsibleBtnImg" alt="">
+                </div>
+                <div class="col-12 collapsibleBtnBlock inactive" id="collapsibleBtnBlock">
+                    <div class="row collapsibleBtnContainer">
+                        <div class="col-md-4 text-center"><a href="#"><img src="img/actionBtn1.png" alt=""></a></div>
+                        <div class="col-md-4 text-center"><a href="#"><img src="img/actionBtn2.png" alt=""></a></div>
+                        <div class="col-md-4 text-center"><a href="#"><img src="img/actionBtn3.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 2nd button block -->
+            <div class="row">
+                <div class="col-12 text-center footer">
+                    <h1>Otras secciones aquí</h1>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+
+    <script src="js/behaviour.js"></script>
+
+</html>

@@ -1,0 +1,271 @@
+body{
+    width: 100vw;
+    background: #2c3e50;
+    overflow-x:hidden;
+}
+
+/*  ------------------------------------------  */
+                /*NAV STYLES*/
+/*  ------------------------------------------  */
+
+
+nav{
+    background-color: #2c3e50;
+    height: 8.5vw;
+    z-index:4
+}
+    @media (max-width: 1199.98px) {
+            nav{
+                height: 17vw;
+            }
+    }
+    @media (max-width: 767.98px) {
+        nav{
+            height: 25vw;
+        }
+        nav img{
+            width: 17vw;
+            height: auto;
+        }
+        .navbar-toggler{
+            position: absolute;
+            right: 5vw;
+            border:solid 1px #fff;
+        }
+        .navbar-nav{
+            padding: 5vw 0;
+        }
+    }
+    
+
+
+.navbar-collapse{
+    margin-top: 5vw;
+}
+
+
+.nav-link-text{
+    line-height: 10vw;
+    padding: 1.5vw;
+}
+.nav-link-text a{    
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #f8f9fa;
+    font-weight: bold;
+}
+.nav-link-text:hover{
+    text-decoration: underline;
+}
+.nav-link-text span{
+    font-weight: normal;
+}
+.web-hidden{
+    display: none;
+}
+    @media (max-width: 1199.98px) {
+        .nav-link-text{
+            padding: 0.5vw;
+            line-height: 18vw;
+        }
+        .nav-link-text a{    
+            font-size: 1em;
+        }
+    }
+    @media (max-width: 767.98px) {
+        .collapse{            
+            width: 100vw;
+        }
+        .navbar-collapse{
+            margin-top: 0vw;
+            background: #2c3e50;
+        }
+        .mobile-hidden{
+            display: none;            
+        }
+        .web-hidden{
+            display: block;
+        }
+    }
+
+
+.social-nav{ 
+    position: absolute;
+    display: inline;
+    top: 1vw;
+    right: 1vw;
+    z-index: 9;
+}
+.btn-circle {
+    text-align: center;
+    border-radius: 50%;
+}
+.social-btn{
+    display: inline;
+    width: 3.5vw;
+    height: 3.5vw;
+    border: 2px solid #f8f9fa;    
+}
+.social-btn a{
+    text-decoration:none;
+    color: #f8f9fa;
+    font-size:1.2em;
+}
+.social-btn:hover, .social-btn:active{
+    background: #f8f9fa;
+}
+.social-btn:hover a, .social-btn:active a{    
+    color: #2c3e50;
+}
+    @media (max-width: 1199.98px) {
+        .social-btn{
+            width: 5vw;
+            height: 5vw;
+        }
+    }
+    @media (max-width: 767.98px) {
+        .social-nav{
+            display:none;
+        }
+        .social-btn{
+            width: 16vw;
+            height: 16vw; 
+        }
+        .social-btn a{            
+            font-size:1.4em;
+        }
+    }
+
+
+
+    /*  ------------------------------------------  */
+                /*AGE-BUTTON BLOCK STYLE*/
+    /*  ------------------------------------------  */
+.age-button-block{
+    background-color: #fff;    
+    height: 35vw;
+}
+.age-background{
+    height: 35vw;
+    background-image: url('../img/dotNormal.jpg');
+    background-repeat: repeat-x;
+    background-position-y: -3vw;
+}
+.age-btn-container-block{
+    position: absolute;
+    z-index: 2;
+    padding-top: 7vw;
+}
+.age-btn-container{
+    text-align: center;
+}
+.age-btn{
+    width:80%;
+}
+.age-btn:hover{
+    margin-top: -5px;
+}
+    @media (max-width: 1199.98px) {
+        .age-background{
+            background-position-y: 0;
+        }
+    }
+    @media (max-width: 767.98px) {
+        .age-button-block{
+            height: 180vw;
+        }
+        .age-background{
+            height: 180vw;
+        }
+        .age-btn{
+            width:60%;
+        }
+        .age-btn-container{
+            padding: 0 5vw;
+        }
+        .age-btn-container:nth-of-type(odd){
+            text-align: left;
+        }
+        .age-btn-container:nth-of-type(even){
+            text-align: right;
+        }
+    }
+
+
+
+    /*  ------------------------------------------  */
+                /*COLLAPSIBLE BTN BLOCK STYLE*/
+    /*  ------------------------------------------  */
+.collapsibleBtnTrigger{
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    background-color: #2c3e50;
+}
+.collapsibleBtnTrigger:hover{
+    cursor: pointer;
+    background-color: #364d63;
+}
+
+.collapsibleBtnBlock{
+    background-color: #364d63;
+    overflow: hidden;    
+}
+.collapsibleBtnBlock.inactive{
+    max-height: 0vw;
+    transition: max-height 0.15s ease-out;
+}
+.collapsibleBtnBlock.active{
+    max-height: 20vw;
+    transition: max-height 0.25s ease-in;
+}
+.collapsibleBtnContainer{
+    padding: 2vw;
+}
+.collapsibleBtnContainer img{
+    width: 70%;
+}
+    @media (max-width: 1199.98px) {
+        .collapsibleBtnTrigger{
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+        }
+        .collapsibleBtnContainer{
+            padding: 3vw 1vw;
+        }
+        .collapsibleBtnContainer img{
+            width: 90%;
+        }
+    }
+    @media (max-width: 767.98px) {
+        .collapsibleBtnTrigger{
+            padding-top: 8vw;
+            padding-bottom: 8vw;
+        }
+        .collapsibleBtnBlock.active{
+            max-height: 100vw;
+        }
+        .collapsibleBtnContainer{
+            padding: 10vw 2vw;
+        }
+        .collapsibleBtnContainer img{
+            width: 90%;
+            margin-bottom: 5vw;
+        }
+    }
+
+
+    /*  ------------------------------------------  */
+                /*FOOTER SYTLE*/
+    /*  ------------------------------------------  */
+.footer{
+    padding: 5vw;
+    height: 20vw;
+    background-color: #18bc9c;
+    color: #fff;
+}
+    @media (max-width: 767.98px) {
+        .footer{
+            padding: 20vw 0;
+            height: 50vw;
+        }
+    }
