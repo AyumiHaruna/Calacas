@@ -25,6 +25,9 @@ var infoButtonArray = [sedeInicio, sedeInfo, sedePoster, sedePrograma];
 //dynamic background
 const dynamicBG = document.getElementById("dynamicBG");
 
+//last 'sede' selected
+var lastSedeSelected;
+
 //----------------------------------------------
             //HTML TEMPLATES
 //----------------------------------------------
@@ -36,12 +39,12 @@ const dynamicBG = document.getElementById("dynamicBG");
 //add eventLister for each "sede" button
 [divCenart, divPinos, divEcatepec, divCentral].forEach( (div) => {
     div.addEventListener("click", () => {     
-        toggleSelectorButton( div.children )
-        toggleSedeGeneral( div.id );
-        toggleDynamicBG( div.id );
-        changeSubMenu( div.id );
+        lastSedeSelected = div.id;
+        toggleSelectorButton( lastSedeSelected );
+        toggleSedeGeneral( lastSedeSelected );
+        toggleDynamicBG( lastSedeSelected );
+        changeSubMenu( lastSedeSelected );
         changeInfoWindow("sede-info");
-
         if(parseFloat(window.screen.availWidth) < 578){
             document.getElementById("selection-container").scrollIntoView();
         }
@@ -51,32 +54,36 @@ const dynamicBG = document.getElementById("dynamicBG");
 //add eventListener for each "sede-info" button
 infoButtonArray.forEach( (button) => {
     button.addEventListener("click", (event) => {
-        if(button.id === "sede-inicio"){
-            toggleSelectorButton( "none" );
+        if(button.id !== "sede-inicio"){
+            
+            toggleSedeGeneral( lastSedeSelected );
+            toggleDynamicBG( lastSedeSelected );
+            changeSubMenu( lastSedeSelected );            
+
+        } else {
+
             toggleSedeGeneral( "poster" );
             toggleDynamicBG( "poster" );
             changeSubMenu( "main" );
-            changeInfoWindow("sede-inicio");
-        } else {
-            changeInfoWindow(button.id);     //change the infoWindow
-        }        
+            
+        }   
+        
+        changeInfoWindow(button.id);
     });
 });
 
 //----------------------------------------------
                 //FUNCTIONS
 //----------------------------------------------
-//change border of selected button
+//change border of sede selected button
 function toggleSelectorButton( selButton ){
-    //hide border form all buttons
-    [divCenart, divPinos, divEcatepec, divCentral].forEach( (div) => {
-        div.children[0].classList.remove("active");
-    }); 
-
-    if(selButton != "none"){
-        //set border on selected button
-        selButton[0].classList.add("active");
-    }
+        //get selected button with the id
+        selButtonChildren = document.getElementById(selButton).children[0];
+        //hide border form all buttons
+        [divCenart, divPinos, divEcatepec, divCentral].forEach( (div) => {
+            div.children[0].classList.remove("active");
+        }); 
+        selButtonChildren.classList.add("active");
 }
 //hide all .div-selection-main and show selected
 function toggleSedeGeneral( id ){
@@ -85,7 +92,7 @@ function toggleSedeGeneral( id ){
         div.classList.remove("selected");
     });
     //add selected class to the selected section
-    let selectedDiv = document.getElementById("sede-"+id);
+    selectedDiv = document.getElementById("sede-"+id);
     selectedDiv.classList.add("selected"); 
 }
 //change the color of dynamic background
@@ -93,7 +100,7 @@ function toggleDynamicBG( id ){
     dynamicBG.classList.remove("active", "posterBG", "cenartBG", "pinosBG", "ecatepecBG", "centralBG");
     setTimeout( () => dynamicBG.classList.add("active", id+"BG"), 50);
 }
-//change colors and actions of subMenú
+//change colors and enable submenu 
 function changeSubMenu( id ){
     //change border color
     subMenu.classList.remove("menuMain", "menuCenart", "menuPinos", "menuEcatepec", "menuCentral")
@@ -101,12 +108,7 @@ function changeSubMenu( id ){
     subMenu.classList.add("menu" + newClass);
 
     //lock / unlock buttons
-    if( id === "main"){
-        //lock sub menú buttons
-        [sedeInfo, sedePoster, sedePrograma].forEach( ( element ) => {
-            element.classList.add("avoid-clicks");
-        });
-    } else {
+    if( id != "main"){ 
         //unlock sub menú buttons
         [sedeInicio, sedeInfo, sedePoster, sedePrograma].forEach( ( element ) => {
             element.classList.remove("avoid-clicks");
@@ -115,30 +117,26 @@ function changeSubMenu( id ){
 }
 //change the info windows and button flag
 function changeInfoWindow( id ){
-    //delete active class from sede-info button
+    //delete active class from sub-menu buttons
     infoButtonArray.forEach(function(element){
         element.classList.remove("active");
     });
-    //set active to selected sede-info button
+    //set active to selected sub-menu button
     document.getElementById(id).classList.add("active");
     
     //get selected "sede"
     var sedeSelected;
-    [divSelMainCenart, divSelMainPinos, divSelMainEcatepec, divSelMainCentral].forEach( (sede) => {
-        if(sede.classList.contains("selected")){
-            sedeSelected = sede;
-        }
-    });
+    sedeSelected = document.getElementById("sede-"+lastSedeSelected);
 
     //show or hide window, depends on selected info-button
     switch(id){
+        
         case "sede-info":
                 prepareInfoWindow( sedeSelected, "hide", id);
             break;
 
         case "sede-subposter":
         case "sede-programa":
-        case "sede-mapa":
                 prepareInfoWindow( sedeSelected, "show", id);
             break;
     }
@@ -264,7 +262,6 @@ function changeInfoWindow( id ){
 }
 //toggle cartelera info tab
 function toggleCartTab( elm ){
-    console.log(elm);
     elm.classList.toggle("active");
     document.getElementById(elm.dataset.target).classList.toggle("active");
 }

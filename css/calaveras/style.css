@@ -216,10 +216,13 @@ nav{
 /*  ------------------------------------------  */
 .event-description-text{
     font-size: 0.9em;
-    margin-bottom: 2vw;
+    margin-bottom: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1vw;
+    border-radius:  3px;
 }
 .div-sedes-container{
-    padding: 6vw 6vw;
+    padding: 3vw 6vw;
 }
 .div-sede{
     padding: 0 2vw;
