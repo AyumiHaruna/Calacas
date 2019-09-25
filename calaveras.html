@@ -70,58 +70,52 @@
 
             <div class="col-lg-6 div-sedes-container">
                 <div class="row">
-                    <div class="col-sm-6 div-sede" id="cenart">
-                        <div class="sede-selector active">
+                    <div class="col-12 text-justify event-description-text">    
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat maximus ante, ut varius turpis tincidunt pharetra. Fusce eleifend velit et auctor eleifend. Maecenas in felis quis lectus consectetur rhoncus. Morbi nec felis in massa bibendum rhoncus non non risus. Vivamus turpis dui, consectetur a lorem quis, pulvinar porttitor nulla. Vestibulum elit purus, iaculis eget elit ve.
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6 div-sede" id="cenart">
+                        <div class="sede-selector">
                             <div class="div-sede-img">
                                     <!-- <img src="" alt="Imagen de Sede 1" /> -->
                             </div>
                             <div class="div-sede-info">
                                 <span>CENART</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac.
-                                </p>
                             </div>
                         </div>                        
                     </div>
 
-                    <div class="col-sm-6 div-sede" id="pinos">
+                    <div class="col-6 div-sede" id="pinos">
                         <div class="sede-selector">
                             <div class="div-sede-img">
                                 <!-- <img src="" alt="Imagen de Sede 1" /> -->
                             </div>
                             <div class="div-sede-info">
                                 <span>Los Pinos</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat.
-                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 div-sede" id="ecatepec">
+                    <div class="col-6 div-sede" id="ecatepec">
                         <div class="sede-selector">
                             <div class="div-sede-img">
                                 <!-- <img src="" alt="Imagen de Sede 1" /> -->
                             </div>
                             <div class="div-sede-info">
                                 <span>Ecatepec</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut.
-                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 div-sede" id="central">
+                    <div class="col-6 div-sede" id="central">
                         <div class="sede-selector">
                             <div class="div-sede-img">
                                 <!-- <img src="" alt="Imagen de Sede 1" /> -->
                             </div>
                             <div class="div-sede-info">
                                 <span>Central de abastos</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ligula.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -130,47 +124,59 @@
 
             <div class="col-lg-6 div-selection-container" id="selection-container">
                 <div class="row">
-                    <div class="col-12 noPadd">
-                        <div class="breadcrumb">
-                            <a href="#" class="sede-info active" id="sede-info">Informacion</a>
-                            <a href="#" class="sede-info" id="sede-poster">poster</a>
-                            <a href="#" class="sede-info" id="sede-programa">programa</a>
-                        </div>
+                    <div class="col-12 sub-menu menuMain noPadd" id="sub-menu">                        
+                        <ul>
+                            <li class="sede-info active" id="sede-inicio">inicio</li>
+                            <li class="sede-info avoid-clicks" id="sede-info">información</li>
+                            <li class="sede-info avoid-clicks" id="sede-subposter">poster</li>
+                            <li class="sede-info avoid-clicks" id="sede-programa">programa</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="row selection-main-block">
-                    <div class="col-12 div-selection-main selected" id="sede-cenart">
+                    <!-- main poster window -->
+                    <div class="col-12 div-selection-main main-poster selected" id="sede-poster">
+                        <a href="img/calaveras/posterGeneralHigh.jpg" target="_blank">
+                            <img src="img/calaveras/posterGeneralLow.jpg" class="posterImage" alt="imagen de poster"/>
+                        </a>                        
+                    </div>
+
+                    <!-- CENART window -->
+                    <div class="col-12 div-selection-main" id="sede-cenart">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-7">
                                 <div class="selection-main-title">
                                     Sede: CENART
                                 </div>
                                 <div class="selection-main-description">
                                     Conoce la programación aquí:
                                     <ul>
-                                        <li><a href="#">Laboratorios creativos</a></li>
-                                        <li><a href="#">Presentaciones artísticas</a></li>
-                                        <li><a href="#">Exposiciones</a></li>
-                                        <li><a href="#">Narraciones orales</a></li>
+                                        <li onClick="showCartSelected(this)" data-sede="cenart">Laboratorios creativos</li>
+                                        <li onClick="showCartSelected(this)" data-sede="cenart">Presentaciones artísticas</li>
+                                        <li onClick="showCartSelected(this)" data-sede="cenart">Exposiciones</li>
+                                        <li onClick="showCartSelected(this)" data-sede="cenart">Narraciones orales</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-5">
                                 <div class="selection-main-pic">
                                     <!-- <img src="" alt=""> -->
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-12 selection-main-map">
-                                    <a href="https://g.page/centronacionaldelasartes?share" target="_blank">
-                                        <img src="img/calaveras/mapaCENART.JPG" alt="Mapa del CENART">
-                                    </a>
-                                    <span>Centro Nacional de las Artes</span> <br>
-                                    Av. Río Churubusco 79, Country Club Churubusco, 04220 Ciudad de México, CDMX <br>
-                                    <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a>
+                        <div class="row">                            
+                            <div class="col-sm-7 selection-main-map">
+                                <a href="https://g.page/centronacionaldelasartes?share" target="_blank">
+                                    <img src="img/calaveras/mapaCENART.JPG" alt="Mapa del CENART">
+                                </a>
+                                
+                            </div>
+                            <div class="col-sm-5 selection-main-map-info">
+                                <span>Centro Nacional de las Artes</span> <br>
+                                Av. Río Churubusco 79, Country Club Churubusco, 04220 Ciudad de México, CDMX <br>
+                                <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a>
                             </div>
                         </div>
 
@@ -184,37 +190,41 @@
                         </div>
                     </div>
 
+                    <!-- Los Pinos window -->
                     <div class="col-12 div-selection-main" id="sede-pinos">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-7">
                                 <div class="selection-main-title">
                                     Sede: Los Pinos
                                 </div>
                                 <div class="selection-main-description">
                                     Conoce la programación aquí:
                                     <ul>
-                                        <li><a href="#">Laboratorios creativos</a></li>
-                                        <li><a href="#">Presentaciones artísticas</a></li>
-                                        <li><a href="#">Exposiciones</a></li>
-                                        <li><a href="#">Narraciones orales</a></li>
+                                        <li onClick="showCartSelected(this)" data-sede="pinos">Laboratorios creativos</li>
+                                        <li onClick="showCartSelected(this)" data-sede="pinos">Presentaciones artísticas</li>
+                                        <li onClick="showCartSelected(this)" data-sede="pinos">Exposiciones</li>
+                                        <li onClick="showCartSelected(this)" data-sede="pinos">Narraciones orales</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-5">
                                 <div class="selection-main-pic">
                                     <!-- <img src="" alt=""> -->
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-12 selection-main-map">
-                                    <a href="https://goo.gl/maps/k6M8Gomg2g1i99Mn7" target="_blank">
-                                        <img src="img/calaveras/mapaPinos.JPG" alt="Mapa del CENART">
-                                    </a>
-                                    <span>Los Pinos</span> <br>
-                                    Calle Parque Lira S/N, Bosque de Chapultepec I Secc, 11850 Ciudad de México, CDMX <br>
-                                    <a href="https://www.lospinosparatodos.com/">https://www.lospinosparatodos.com/</a>
+                        
+                        <div class="row">                            
+                            <div class="col-sm-7 selection-main-map">
+                                <a href="https://goo.gl/maps/k6M8Gomg2g1i99Mn7" target="_blank">
+                                    <img src="img/calaveras/mapaPinos.JPG" alt="Mapa del Los Pinos">
+                                </a>
+                                
+                            </div>
+                            <div class="col-sm-5 selection-main-map-info">
+                                <span>Los Pinos</span> <br>
+                                Calle Parque Lira S/N, Bosque de Chapultepec I Secc, 11850 Ciudad de México, CDMX <br>
+                                <a href="https://www.lospinosparatodos.com/">https://www.lospinosparatodos.com/</a>
                             </div>
                         </div>
 
@@ -228,39 +238,42 @@
                             </div>
                     </div>
 
+                    <!-- Ecatepec window -->
                     <div class="col-12 div-selection-main" id="sede-ecatepec">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-7">
                                 <div class="selection-main-title">
                                     Sede: Ecatepec
                                 </div>
                                 <div class="selection-main-description">
                                     Conoce la programación aquí:
                                     <ul>
-                                        <li><a href="#">Laboratorios creativos</a></li>
-                                        <li><a href="#">Presentaciones artísticas</a></li>
-                                        <li><a href="#">Exposiciones</a></li>
-                                        <li><a href="#">Narraciones orales</a></li>
+                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Laboratorios creativos</li>
+                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Presentaciones artísticas</li>
+                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Exposiciones</li>
+                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Narraciones orales</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-5">
                                 <div class="selection-main-pic">
                                     <!-- <img src="" alt=""> -->
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-12 selection-main-map">
-                                    <a href="https://goo.gl/maps/c93rKWyXz91zA5GZ6" target="_blank">
-                                        <img src="img/calaveras/mapaEcatepec.JPG" alt="Mapa del CENART">
-                                    </a>
-                                    <span>Ecatepec</span> <br>
-                                    <!-- Av. Río Churubusco 79, Country Club Churubusco, 04220 Ciudad de México, CDMX <br> -->
-                                    <!-- <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a> -->
+                        
+                        <div class="row">                            
+                            <div class="col-sm-7 selection-main-map">
+                                <a href="https://goo.gl/maps/c93rKWyXz91zA5GZ6" target="_blank">
+                                    <img src="img/calaveras/mapaEcatepec.JPG" alt="Mapa del CENART">
+                                </a>                                
                             </div>
-                        </div>
+                            <div class="col-sm-5 selection-main-map-info">
+                                <span>Ecatepec</span> <br>
+                                <!-- Av. Río Churubusco 79, Country Club Churubusco, 04220 Ciudad de México, CDMX <br> -->
+                                <!-- <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a> -->
+                            </div>
+                        </div>                        
 
                         <div class="row hidden-row">
                                 <div class="col-12 text-center hidden-load-container">
@@ -272,39 +285,42 @@
                             </div>
                     </div>
 
+                    <!-- Central window -->
                     <div class="col-12 div-selection-main" id="sede-central">
                         <div class="row">
-                            <div class="col-sm-5">
+                            <div class="col-sm-7">
                                 <div class="selection-main-title">
                                     Sede: Central de abastos
                                 </div>
                                 <div class="selection-main-description">
                                     Conoce la programación aquí:
                                     <ul>
-                                        <li><a href="#">Laboratorios creativos</a></li>
-                                        <li><a href="#">Presentaciones artísticas</a></li>
-                                        <li><a href="#">Exposiciones</a></li>
-                                        <li><a href="#">Narraciones orales</a></li>
+                                        <li onClick="showCartSelected(this)" data-sede="central">Laboratorios creativos</li>
+                                        <li onClick="showCartSelected(this)" data-sede="central">Presentaciones artísticas</li>
+                                        <li onClick="showCartSelected(this)" data-sede="central">Exposiciones</li>
+                                        <li onClick="showCartSelected(this)" data-sede="central">Narraciones orales</li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-5">
                                 <div class="selection-main-pic">
                                     <!-- <img src="" alt=""> -->
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
 
-                        <div class="row">
-                            <div class="col-12 selection-main-map">
-                                    <a href="https://goo.gl/maps/rxmaA48QFVeGWmGZA" target="_blank">
-                                        <img src="img/calaveras/mapaCentral.JPG" alt="Mapa de la central de abastos">
-                                    </a>
-                                    <span>Central de Abastos</span> <br>
-                                    México-texcoco S/N, Santa Cruz Venta de Carpio, 55060 Ecatepec de Morelos, Méx. <br>
-                                    <!-- <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a> -->
+                        <div class="row">                            
+                            <div class="col-sm-7 selection-main-map">
+                                <a href="https://goo.gl/maps/t7xVT5RPFCczCCvS7" target="_blank">
+                                    <img src="img/calaveras/mapaCentral.JPG" alt="Mapa de la central de abastos">
+                                </a>
                             </div>
-                        </div>
+                            <div class="col-sm-5 selection-main-map-info">
+                                <span>Central de Abastos</span> <br>
+                                Canal Río Churubusco s/n, Área Federal Central de Abastos, 09040 Ciudad de México, CDMX <br>
+                                <!-- <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a> -->
+                            </div>
+                        </div>              
 
                         <div class="row hidden-row">
                                 <div class="col-12 text-center hidden-load-container">
@@ -327,7 +343,8 @@
     </div>
 
     <!-- dynamic background -->
-    <div class="dynamicBG active cenartBG" id="dynamicBG"></div>
+    <div class="dynamicBG active posterBG" id="dynamicBG"></div>
 </body>
 <script src="js/calaveras/behaviour.js"></script>
+<script src="js/calaveras/cartelera.js"></script>
 </html>

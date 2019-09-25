@@ -31,6 +31,9 @@ body{
     animation: fadeInFromNone 0.5s ease-in;
     opacity: 1
 }
+.posterBG{
+    background-color: #bfbfbf;
+}
 .cenartBG{
     background-color: #e6fff1;
 }
@@ -105,14 +108,14 @@ nav{
 }
 .social-btn{
     display: inline;
-    width: 3.8vw;
-    height: 3.8vw;
+    width: 3vw;
+    height: 3vw;
     border: 2px solid #f8f9fa;    
 }
 .social-btn a{
     text-decoration:none;
     color: #f8f9fa;
-    font-size:1.4vw;
+    font-size:1vw;
     margin: auto;
 }
 .social-btn:hover, .social-btn:active{
@@ -121,6 +124,15 @@ nav{
 .social-btn:hover a, .social-btn:active a{    
     color: #2c3e50;
 }
+    @media (max-width: 1200px) {
+        .social-btn{
+            width: 3.7vw;
+            height: 3.7vw;
+        }
+        .social-btn a{
+            font-size:0.9vw;
+        }
+    }
     @media (max-width: 992px) {
         nav{
             padding: 1vw !important;
@@ -202,12 +214,17 @@ nav{
 /*  ------------------------------------------  */
             /*DIV-SEDES STYLES*/
 /*  ------------------------------------------  */
+.event-description-text{
+    font-size: 0.9em;
+    margin-bottom: 2vw;
+}
 .div-sedes-container{
     padding: 6vw 6vw;
 }
 .div-sede{
-    padding: 0 4vw 0 0;
+    padding: 0 2vw;
     margin-bottom:  2vw;
+    text-align: center;
 }
 .sede-selector{
     background-color: #fff;
@@ -240,17 +257,11 @@ nav{
     font-weight: bold;
     font-size: 1.1em;
 }
-    @media (max-width: 992px) {
-        .div-sedes-container{
-            padding: 6vw 6vw 2vw 6vw;;
-        }
-    }
     @media (max-width: 576px) {
         .div-sedes-container{
-            padding: 6vw 10vw;
+            padding: 10vw 7vw 5vw 7vw;
         }
         .div-sede{
-            padding: 0;
             margin-bottom:  2vw;
         }
         .sede-selector{
@@ -275,93 +286,55 @@ nav{
     padding: 2vw 4vw 0 0;
 }
 
-.breadcrumb {
-	display: inline-block;
-    overflow: hidden;
-    border: solid 1px #bfbfbf;
-    border-radius: 3px;
+.sub-menu{
+    text-align:right;
+}
+.sub-menu ul{
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
     float: right;
+    display: table;
+    width: 60%;
 }
-.breadcrumb a {
-	text-decoration: none;
-	outline: none;
-	display: block;
-	float: left;
-	font-size: 1em;
-	line-height: 2.8vw;
-	color: #a0a6ab;
-	padding: 0 1.5vw 0 4vw;
-	background: #e3eaf4;
-	position: relative;
+.sub-menu li{
+    padding: 0.5vw 1.5vw;
+    text-align: center;
+    display: table-cell;
+    cursor: pointer;
 }
-/*El primer boton no requiere un triangulo a la izquierda por lo que recorremos el padding-left*/
-.breadcrumb a:first-child {
-	padding-left: 3vw;
-	border-radius: 3px 0 0 3px; 
+.avoid-clicks{
+    opacity: 0.5;
+    pointer-events: none;
 }
-.breadcrumb a:last-child {
-	border-radius: 0 3px 3px 0;
+.sub-menu .active{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: solid 2px;
+    border-bottom: none;
+    transition: border 0.2s ease-in;
+    background-color: rgba(255, 255, 255, 0.5);
 }
-.breadcrumb a.active, .breadcrumb a:hover, 
-.breadcrumb a.active:after, 
-.breadcrumb a:hover:after{
-    background: #c8d6ea;
-    color: #475258;
-    font-weight: bold;
-    transition: background 0.15s ease-in;
+.sub-menu.menuMain .active{
+    border-color:  #595959;
 }
-/*En este estilo agregamos las flechas a los botones*/
-.breadcrumb a:after {
-	content: '';
-	position: absolute;
-	top: 0; 
-	width: 2.8vw; 
-	height: 2.8vw;
-	transform: scale(0.707) rotate(45deg);
-	z-index: 1;
-	background: #e3eaf4;
-	box-shadow: 
-		2px -2px 0 0 rgba(0, 0, 0, 0.3), 
-		3px -3px 0 0 rgba(255, 255, 255, 0.1);
-	border-radius: 0 5px 0 50px;
+.sub-menu.menuCenart .active{
+    border-color:  #00cf5d;
 }
-/*no necesitamos la flecha en el último boton*/
-.breadcrumb a:last-child:after {
-	content: none;
+.sub-menu.menuPinos .active{
+    border-color:  #ff9933;
 }
-    @media (max-width: 992px) {
-        .div-selection-container{
-            padding: 0 6vw;
-        }
-        .noPadd{
-            text-align:center;
-        }
-        .breadcrumb {
-            float: none;
-        }
-        .breadcrumb a {
-            font-size: 1.2em;
-            line-height: 4vw;
-            padding: 0 2.5vw 0 4vw;
-        }
-        .breadcrumb a:after {
-            width: 4vw; 
-            height: 4vw;
-        }
-    }
-    @media (max-width: 576px) {        
-        .breadcrumb a {
-            font-size: 1.1em;
-            line-height: 8vw;
-            padding: 0 4.5vw 0 5vw;
-        }
-        .breadcrumb a:after {
-            width: 8vw; 
-            height: 8vw;
-        }
-    }
+.sub-menu.menuEcatepec .active{
+    border-color:  #ff66cc;
+}
+.sub-menu.menuCentral .active{
+    border-color:  #6699ff;
+}
 
+.sub-menu li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
 
 .div-selection-main{    
@@ -375,19 +348,28 @@ nav{
     display: none;
 }
 .div-selection-main:nth-of-type(1){
-    background: #00cf5d;
+    background: #333;
 }
 .div-selection-main:nth-of-type(2){
-    background: #ff9933;
+    background: #00cf5d;
 }
 .div-selection-main:nth-of-type(3){
-    background: #ff66cc;
+    background: #ff9933;
 }
 .div-selection-main:nth-of-type(4){
+    background: #ff66cc;
+}
+.div-selection-main:nth-of-type(5){
     background: #6699ff;
 }
 
-
+.div-selection-main.main-poster{
+    height: 38vw;
+    overflow-y: auto;
+}
+.div-selection-main.main-poster img{
+    width: 100%;
+}
 .div-selection-main.selected{
     display: block;    
     -webkit-animation: fadeInFromNone 0.5s ease-in;
@@ -404,12 +386,18 @@ nav{
     margin-left: 1.5vw;
 }
 .selection-main-description{
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 3px;
     padding: 1vw 1vw;
-    margin: 2vw 0vw 0 0;
+    margin: 1vw 0vw 0 0;
     height: 10vw;
-    overflow: auto;
+}
+.selection-main-description li{
+    color: #000;
+    cursor: pointer;
+}
+.selection-main-description li:hover{
+    text-decoration: underline;
 }
 .selection-main-description ul{
     list-style: none;
@@ -417,28 +405,44 @@ nav{
 
 .selection-main-pic{
     background: #e3eaf4;
-    margin: 0 0 0 4vw;
     height: 14vw;
-    cursor: pointer;
 }
 
-.selection-main-map{
-    text-align: center;
-    color: #fff;
-}
-.selection-main-map span{
-    font-weight: bold;
-}
-.selection-main-map a{
-    color: #fff;
-}
 .selection-main-map img{
     margin-top: 2vw;
     width: 100%;
     height: auto;
     cursor: pointer;
 }
+.selection-main-map-info{
+    padding: 2vw 2vw;
+    text-align: left;
+    color: #fff;
+}
+.selection-main-map-info span{
+    font-weight: bold;
+}
+.selection-main-map-info a{
+    color: #fff;
+    text-decoration: underline;
+}
     @media (max-width: 992px) {
+        .sub-menu{
+            text-align:center;
+        }
+        .sub-menu ul{
+            margin: auto;
+            float: none;
+            width: 70%;
+        }
+        .sub-menu li{
+            padding: 1vw 1.5vw;
+        }
+
+
+        .div-selection-container{
+            padding: 2vw 0 0 0;
+        }
         .div-selection-main{   
             padding: 3vw 4vw;    
         }
@@ -469,6 +473,13 @@ nav{
         }
     }
     @media (max-width: 576px) {
+        .sub-menu ul{
+            width: 90%;
+        }
+        .sub-menu li{
+            padding: 3vw 2vw;
+        }
+
         .selection-main-block{   
             padding: 0 3vw;
         }
@@ -516,6 +527,9 @@ nav{
 }
 .hidden-info-window{
     display: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3vw;
+    border-radius: 3px;
 }
 .hidden-info-window img{
     width: 100%;
@@ -543,19 +557,64 @@ nav{
 .hidden-info-window .cart-sede .dwn-div img{
     width: 3vw;
 }
-.hidden-info-window .actividad{
-    background: #fff;
-    border-radius: 3px; 
-    padding: 1vw;
+
+.btn-collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
-.hidden-info-window .actividad .act-header{
-    background: #e3eaf4;
+.btn-collapsible ~ .btn-collapsible{
+    border-radius: 0px;
+}
+.btn-collapsible.active, .btn-collapsible:hover {
+background-color: #555;
+}
+
+.content {
+padding: 2vw;
+display: none;
+overflow: hidden;
+background-color: #fff;
+}
+.content.active{
+display: block;
+-webkit-animation: slide-down 0.2s ease-in;
+-moz-animation: slide-down 0.2s ease-in;
+-o-animation: slide-down 0.2s ease-in;
+animation: slide-down 0.2s ease-in;
+}
+
+.content .actividad{
+    background: #f1f1f1;    
+    padding: 1vw;
+    border-bottom: solid 1px #000;
+    margin-bottom:  1.5vw;
+}
+.content .actividad .act-header{
+    background: #e6e6e6;
     border-radius: 3px; 
     padding: 1.5vw;
     text-align: center;
     font-size: 1.3em;
     margin-bottom: 1vw;
 }
+span.area{
+    font-weight: bold;
+    font-style: italic;
+}
+span.fecha{
+    font-size:  0.9em;
+}
+
+
     @media (max-width: 992px) {
         .hidden-row{
             height: 88vw;
@@ -575,11 +634,11 @@ nav{
         .hidden-info-window .cart-sede .dwn-div img{
             width: 5vw;
         }
-        .hidden-info-window .actividad{
+        .content .actividad{
             padding: 1.5vw;
             margin-bottom: 0.5vw;
         }
-        .hidden-info-window .actividad .act-header{
+        .content .actividad .act-header{
             font-size: 1.4em;
             margin-bottom: 1.5vw;
         }
@@ -608,10 +667,10 @@ nav{
         .hidden-info-window .cart-sede .dwn-div img{
             width: 10vw;
         }
-        .hidden-info-window .actividad{
+        .content .actividad{
             font-size:  0.9em;
         }
-        .hidden-info-window .actividad .act-header{
+        .content .actividad .act-header{
             font-size: 1.2em;
             padding: 3vw 2vw;
             margin-bottom: 1.5vw;
@@ -640,22 +699,6 @@ nav{
 /*  ------------------------------------------  */
             /*ANIMATIONS*/
 /*  ------------------------------------------  */
-@-webkit-keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
 @-webkit-keyframes fadeInFromNone {
     0% {
         display: none;
@@ -719,4 +762,21 @@ nav{
         display: block;
         opacity: 1;
     }
+}
+
+@-webkit-keyframes slide-down {
+    0% { opacity: 0; }   
+  100% { opacity: 1; }
+}
+@-moz-keyframes slide-down {
+    0% { opacity: 0; }   
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeInFromNone {
+    0% { opacity: 0; }   
+  100% { opacity: 1; }
+}
+@keyframes fadeInFromNone {
+    0% { opacity: 0; }   
+  100% { opacity: 1; }
 }

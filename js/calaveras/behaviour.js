@@ -8,15 +8,19 @@ const divEcatepec = document.getElementById('ecatepec');
 const divCentral = document.getElementById('central');
 
 // "sede-selection-main" windows
+const divSelMainPoster = document.getElementById('sede-poster');
 const divSelMainCenart = document.getElementById('sede-cenart');
 const divSelMainPinos = document.getElementById('sede-pinos');
 const divSelMainEcatepec = document.getElementById('sede-ecatepec');
 const divSelMainCentral = document.getElementById('sede-central');
 
 // "sede-info" navigation buttons
+const subMenu = document.getElementById("sub-menu");
+const sedeInicio = document.getElementById('sede-inicio');
 const sedeInfo = document.getElementById('sede-info');
-const sedePoster = document.getElementById('sede-poster');
+const sedePoster = document.getElementById('sede-subposter');
 const sedePrograma = document.getElementById('sede-programa');
+var infoButtonArray = [sedeInicio, sedeInfo, sedePoster, sedePrograma];
 
 //dynamic background
 const dynamicBG = document.getElementById("dynamicBG");
@@ -24,149 +28,7 @@ const dynamicBG = document.getElementById("dynamicBG");
 //----------------------------------------------
             //HTML TEMPLATES
 //----------------------------------------------
-const posterCenart =    `<a href="img/calaveras/poster CENART 768x1024.jpg" target="_blank">
-                            <img src="img/calaveras/Poster CENART 400x600.jpg" class="posterImage" alt="imagen de poster"/>
-                        </a>`;
-const programaCenart = `<div class="cartelera">
-                            <div class="cart-sede">
-                                Cartelera CENART
-                                <div class="dwn-div">
-                                    <a href="img/calaveras/programa.pdf" target="_blank">
-                                        <img src="img/calaveras/dwnIco.png" alt="animacion de loader"> <br>
-                                        Descargar cartelera
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
-                        </div>`;
-const posterPinos = `<a href="img/calaveras/poster Los Pinos 768x1024.jpg" target="_blank">
-                        <img src="img/calaveras/Poster Los Pinos 400x600.jpg" class="posterImage" alt="imagen de poster"/>
-                    </a>`;
-const programaPinos = `<div class="cartelera">
-                            <div class="cart-sede">
-                                Cartelera Los pinos
-                                <div class="dwn-div">
-                                    <a href="img/calaveras/programa.pdf" target="_blank">
-                                        <img src="img/calaveras/dwnIco.png" alt="animacion de loader"> <br>
-                                        Descargar cartelera
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
-                        </div>`;
-const posterEcatepec = `<a href="img/calaveras/poster Ecatepec 768x1024.jpg" target="_blank">
-                            <img src="img/calaveras/Poster Ecatepec 400x600.jpg" class="posterImage" alt="imagen de poster"/>
-                        </a>`;
-const programaEcatepec = `<div class="cartelera">
-                            <div class="cart-sede">
-                                Cartelera Ecatepec
-                                <div class="dwn-div">
-                                    <a href="img/calaveras/programa.pdf" target="_blank">
-                                        <img src="img/calaveras/dwnIco.png" alt="animacion de loader"> <br>
-                                        Descargar cartelera
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
-                        </div>`;
-const posterCentral = `<a href="img/calaveras/poster Central de Abastos 768x1024.jpg" target="_blank">
-                            <img src="img/calaveras/Poster Central de Abastos 400x600.jpg" class="posterImage" alt="imagen de poster"/>
-                        </a>`;
-const programaCentral = `<div class="cartelera">
-                            <div class="cart-sede">
-                                Cartelera Central de Abastos
-                                <div class="dwn-div">
-                                    <a href="img/calaveras/programa.pdf" target="_blank">
-                                        <img src="img/calaveras/dwnIco.png" alt="animacion de loader"> <br>
-                                        Descargar cartelera
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
 
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
-
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
-
-                            <div class="actividad">
-                                <div class="act-header">
-                                    Nombre de la actividad CENART
-                                </div>
-                                <div class="act-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                    Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
-                                    Proin nec ligula viverra, pretium tortor non, pretium purus. 
-                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus non tortor euismod, 
-                                    suscipit tellus nec, cursus dolor.
-                                </div>
-                            </div>
-                        </div>`;
 
 //----------------------------------------------
             //DOM EVENT LISTENERS
@@ -177,6 +39,7 @@ const programaCentral = `<div class="cartelera">
         toggleSelectorButton( div.children )
         toggleSedeGeneral( div.id );
         toggleDynamicBG( div.id );
+        changeSubMenu( div.id );
         changeInfoWindow("sede-info");
 
         if(parseFloat(window.screen.availWidth) < 578){
@@ -186,11 +49,17 @@ const programaCentral = `<div class="cartelera">
 })
 
 //add eventListener for each "sede-info" button
-var infoButtonArray = [sedeInfo, sedePoster, sedePrograma];
 infoButtonArray.forEach( (button) => {
     button.addEventListener("click", (event) => {
-        event.preventDefault();     //stop href action
-        changeInfoWindow(button.id);     //change the infoWindow
+        if(button.id === "sede-inicio"){
+            toggleSelectorButton( "none" );
+            toggleSedeGeneral( "poster" );
+            toggleDynamicBG( "poster" );
+            changeSubMenu( "main" );
+            changeInfoWindow("sede-inicio");
+        } else {
+            changeInfoWindow(button.id);     //change the infoWindow
+        }        
     });
 });
 
@@ -200,26 +69,49 @@ infoButtonArray.forEach( (button) => {
 //change border of selected button
 function toggleSelectorButton( selButton ){
     //hide border form all buttons
-    [divCenart, divPinos, divEcatepec, divCentral].forEach(function(div){
+    [divCenart, divPinos, divEcatepec, divCentral].forEach( (div) => {
         div.children[0].classList.remove("active");
-    })
-    //set border on selected button
-    selButton[0].classList.add("active");
+    }); 
+
+    if(selButton != "none"){
+        //set border on selected button
+        selButton[0].classList.add("active");
+    }
 }
 //hide all .div-selection-main and show selected
 function toggleSedeGeneral( id ){
     //hide all .div-selection-main (just removing "selected" class)
-    [divSelMainCenart, divSelMainPinos, divSelMainEcatepec, divSelMainCentral].forEach(function(div){
+    [divSelMainPoster, divSelMainCenart, divSelMainPinos, divSelMainEcatepec, divSelMainCentral].forEach(function(div){
         div.classList.remove("selected");
-    })
+    });
     //add selected class to the selected section
     let selectedDiv = document.getElementById("sede-"+id);
-    selectedDiv.classList.add("selected");
+    selectedDiv.classList.add("selected"); 
 }
 //change the color of dynamic background
 function toggleDynamicBG( id ){
-    dynamicBG.classList.remove("active", "cenartBG", "pinosBG", "ecatepecBG", "centralBG");
+    dynamicBG.classList.remove("active", "posterBG", "cenartBG", "pinosBG", "ecatepecBG", "centralBG");
     setTimeout( () => dynamicBG.classList.add("active", id+"BG"), 50);
+}
+//change colors and actions of subMenú
+function changeSubMenu( id ){
+    //change border color
+    subMenu.classList.remove("menuMain", "menuCenart", "menuPinos", "menuEcatepec", "menuCentral")
+    var newClass = id.charAt(0).toUpperCase() + id.slice(1);
+    subMenu.classList.add("menu" + newClass);
+
+    //lock / unlock buttons
+    if( id === "main"){
+        //lock sub menú buttons
+        [sedeInfo, sedePoster, sedePrograma].forEach( ( element ) => {
+            element.classList.add("avoid-clicks");
+        });
+    } else {
+        //unlock sub menú buttons
+        [sedeInicio, sedeInfo, sedePoster, sedePrograma].forEach( ( element ) => {
+            element.classList.remove("avoid-clicks");
+        });
+    }
 }
 //change the info windows and button flag
 function changeInfoWindow( id ){
@@ -244,7 +136,7 @@ function changeInfoWindow( id ){
                 prepareInfoWindow( sedeSelected, "hide", id);
             break;
 
-        case "sede-poster":
+        case "sede-subposter":
         case "sede-programa":
         case "sede-mapa":
                 prepareInfoWindow( sedeSelected, "show", id);
@@ -304,28 +196,83 @@ function changeInfoWindow( id ){
 
 
         function loadToHidden(id, sede, button ){
-            var infoToPrint;
-            switch(id){
-                case "sede-cenart":
-                        infoToPrint = ( button === "sede-poster" )? posterCenart : programaCenart;
-                    break;
-                case "sede-pinos":
-                        infoToPrint = ( button === "sede-poster" )? posterPinos : programaPinos;
-                    break;
-                case "sede-ecatepec":
-                        infoToPrint = ( button === "sede-poster" )? posterEcatepec : programaEcatepec;
-                    break;
-                case "sede-central":
-                        infoToPrint = ( button === "sede-poster" )? posterCentral : programaCentral;
-                    break;
-            }            
+            //get sede name
+            id = id.replace("sede-", "");
 
-            sede.children[1].innerHTML = infoToPrint
+            //get data for this sede name
+            sedeData = infoCarteleras[id];
 
+            var infoToPrint = "";
+
+            if(button === "sede-subposter"){
+                //print the posterLowRes
+                infoToPrint = `
+                    <a href="${sedeData.posterHight}" target="_blank">
+                        <img src="${sedeData.posterLow}" class="posterImage" alt="poster de ${sedeData.sede}"/>
+                    </a>`;
+            } else {
+                //print cartelera
+                infoToPrint += `
+                <div class="cartelera">
+                    <div class="cart-sede">
+                        Cartelera - ${sedeData.sede}
+
+                        <div class="dwn-div">
+                            <a href="${sedeData.programa}" target="_blank">
+                                <img src="img/calaveras/dwnIco.png" alt="boton desacargar cartelera"> <br>
+                                Descargar cartelera
+                            </a>
+                        </div>
+                    </div>`;
+
+                for( var actividad in sedeData.actividades){
+                    infoToPrint += `
+                        <div class="btn-collapsible" data-target="${id}-${actividad}" onClick="toggleCartTab(this)">
+                            ${actividad}
+                        </div>`;
+                                
+                    infoToPrint += `<div class="content" id="${id}-${actividad}">`;
+                    
+                    for( var elm in sedeData.actividades[actividad]){
+                        infoToPrint += `
+                            <div class="actividad">
+                                <div class="act-header">
+                                    ${sedeData.actividades[actividad][elm]["nombre"]}
+                                </div>
+                                <div class="act-body">
+                                    ${sedeData.actividades[actividad][elm]["descripción"]}  <br>  
+                                    <span class="area">
+                                        ${sedeData.actividades[actividad][elm]["area"]} <br>
+                                    </span>                                    
+                                    <span class="fecha">
+                                        ${sedeData.actividades[actividad][elm]["fecha"]} 
+                                        ${sedeData.actividades[actividad][elm]["hora"]}
+                                    </span>
+                                    
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    infoToPrint += `</div>`;
+                }
+                infoToPrint += `</div>`;
+            }
+            sede.children[1].innerHTML = infoToPrint; 
         }
     }
 }
-
-
-
+//toggle cartelera info tab
+function toggleCartTab( elm ){
+    console.log(elm);
+    elm.classList.toggle("active");
+    document.getElementById(elm.dataset.target).classList.toggle("active");
+}
+//show 'cartelera' from 'informacion' menu
+function showCartSelected( elm ){
+    changeInfoWindow( "sede-programa" );
+    var trigger = document.querySelectorAll(`[data-target="${elm.dataset.sede}-${elm.innerHTML}"]`);
+    var trigger = trigger[0];
+    toggleCartTab( trigger );
+}
 
