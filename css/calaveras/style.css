@@ -1,8 +1,22 @@
+@font-face {
+    font-family: 'albertus'; 
+    src: url('../../webfonts/albertus/ALBMTL_S.TTF');
+}
+@font-face {
+    font-family: 'albertus-medium'; 
+    src: url('../../webfonts/albertus/ALR___UB.TTF'); 
+}
+@font-face {
+    font-family: 'albertus-black'; 
+    src: url('../../webfonts/albertus/ALXB__UB.TTF'); 
+}
+
+
 html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'albertus', sans-serif;
     width: 100vw;
     overflow-x: hidden;
     font-size: 14px;
@@ -58,6 +72,7 @@ nav{
     -moz-box-shadow: 0px 1px 5px 0px rgba(125,125,125,1);
     box-shadow: 0px 1px 5px 0px rgba(125,125,125,1);
     padding: 0 !important;
+    font-family: 'Montserrat', sans-serif;
 }
 .accessible-button{
     margin: 1vw;
@@ -683,7 +698,86 @@ span.fecha{
 /*  ------------------------------------------  */
             /*FOOTER STYLES*/
 /*  ------------------------------------------  */
-.footer{
+.footer-ayr{
+    background-color: #552962;
+    padding: 1vw 2vw 1vw 2vw;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-ayr .sub-div{
+    padding: 2vw 5vw;
+    color: #f7c6a1;
+    text-align: justify;
+}
+.footer-ayr .sub-div:nth-child(2){
+    font-size: 0.9em;
+    margin-top: 3.5vw;
+}
+.footer-ayr .sub-div:nth-child(3){
+    margin-top: 2vw;
+    text-align: center;
+}
+.footer-ayr .sub-div a{
+    color: #f7c6a1;
+    text-decoration: none;
+}
+.footer-ayr .sub-div a:hover{
+    color: #f89343;
+    text-decoration: underline;
+}
+.footer-ayr .sub-div img{
+    display: block;
+    margin: auto;
+    width: 45%;
+}
+
+
+
+.footer-gob{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    background-color:  #7E3353;
+    /* background-image: url('../../img/fondofooter.svg'); */
+    background-size: cover;
+    color: #fff;    
+    /* font-size: 1.1em; */
+}
+.footer-gob #pleca-gob{
+    width: 100vw;
+}
+.footer-gob .sub-div{
+    padding: 1vw 4vw 1vw 4vw;
+}
+.footer-gob .sub-div a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-gob .sub-div a:hover,
+.footer-gob .sub-div a:active{
+    text-decoration: underline;
+    color: #007bff;
+}
+.footer-gob span{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.footer-gob1{
+    text-align: center;
+}
+.footer-gob1 img{
+    width: 80%;
+}
+.footer-gob3 p:first-of-type a {
+    text-decoration: underline;
+}
+.footer-gob4 span{
+    text-decoration: underline;
+}
+
+
+
+/* .footer{
     margin-top: 3vw;
     text-align: center;
     background-color: #2c3e50;
@@ -696,7 +790,7 @@ span.fecha{
         padding: 8vw 0;
     }
 }
-
+ */
 
 
 /*  ------------------------------------------  */
@@ -775,11 +869,11 @@ span.fecha{
     0% { opacity: 0; }   
   100% { opacity: 1; }
 }
-@-o-keyframes fadeInFromNone {
+@-o-keyframes slide-down {
     0% { opacity: 0; }   
   100% { opacity: 1; }
 }
-@keyframes fadeInFromNone {
+@keyframes slide-down {
     0% { opacity: 0; }   
   100% { opacity: 1; }
 }
