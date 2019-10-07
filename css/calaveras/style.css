@@ -112,10 +112,10 @@ nav{
 }
     @media (max-width: 576px) {
         .sub-nav{
-            height: 20vw;
+            height: 25vw;
         }
         .sub-nav img{
-            width: 20vw;
+            width: 25vw;
         }
     }
     
@@ -153,21 +153,22 @@ nav{
 }
     @media (max-width: 576px) {
         .parallaxWindow {
-            height: 60vw;
+            height: 100vw;
         }
         .bgParallaxContent{
-            height: 60vw;
+            height: 100vw;
         }
         #calacasLogo {
             margin-top: 3vw;
-            width: 60%;
+            width: 80%;
         }
         .cartelBanner{
-            width: 85%;
+            margin-top: 10vw;
+            width: 95%;
         }
         #bgParallax1{
-            width: 150%;
-            margin: -20vw;
+            width: 200%;
+            margin-left: -40vw;
         }
     }
 
