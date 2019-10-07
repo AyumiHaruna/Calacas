@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/all.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@4.0.0/dist/simpleParallax.min.js"></script>
     <!-- <script src="js/bootstrap.min.js"></script> -->
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
         
         <div class="collapse navbar-collapse" id="navbarToggler">
             <div class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <button class="btn btn-dark accessible-button">Accesiblidad</button>
+                <button class="btn btn-dark accessible-button"><i class="fas fa-lg fa-wheelchair"></i> &nbsp; Accesiblidad</button>
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -46,300 +47,105 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
                 </li>
-                <li class="nav-item social-top">
+                <!-- <li class="nav-item social-top">
                     <button type="button" class="btn btn-circle social-btn"><a href="https://www.facebook.com/alasyraicescultura/"><i class="fab fa-lg fa-facebook-f"></i></a></button>
                     <button type="button" class="btn btn-circle social-btn"><a href="https://twitter.com/alasyraices"><i class="fab fa-lg fa-twitter"></i></a></button>
                     <button type="button" class="btn btn-circle social-btn"><a href="https://www.instagram.com/alasyraicescultura/"><i class="fab fa-lg fa-instagram"></i></a></button>    
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
     <div class="col-12 sub-nav">
         <img src="img/ayr1.png" class="align-top" alt="Logo alas y raices">
-        <div class="social-nav">
+        <!-- <div class="social-nav">
                 <button type="button" class="btn btn-circle social-btn"><a href="https://www.facebook.com/alasyraicescultura/"><i class="fab fa-lg fa-facebook-f"></i></a></button>
                 <button type="button" class="btn btn-circle social-btn"><a href="https://twitter.com/alasyraices"><i class="fab fa-lg fa-twitter"></i></a></button>
                 <button type="button" class="btn btn-circle social-btn"><a href="https://www.instagram.com/alasyraicescultura/"><i class="fab fa-lg fa-instagram"></i></a></button>
-        </div>
+        </div> -->
     </div>
 
     <!-- main container -->
     <div class="container-fluid">
         <div class="row">
-
-            <div class="col-lg-6 div-sedes-container">
-                <div class="row">
-                    <div class="col-12 text-justify event-description-text">    
-                        <b>Ofrendas, juegos, danza, música, teatro y artes circenses en este evento familiar que organiza Alas y Raíces.</b> <br><br>
-                        Disfruta del Día de Muertos en familia con la X??? Feria de las Calacas, un evento dedicado a las tradiciones mexicanas con diversas actividades para que los niños conozcan más sobre estas raíces culturales. <br><br>
-                        En esta edición habrá talleres creativos, de danza, música, teatro, literatura, movimiento; arqueología, poesía, artes plásticas y hasta foros de participación infantil.
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6 div-sede" id="cenart">
-                        <div class="sede-selector">
-                            <div class="div-sede-img">
-                                    <!-- <img src="" alt="Imagen de Sede 1" /> -->
-                            </div>
-                            <div class="div-sede-info">
-                                <span>CENART</span>
-                            </div>
-                        </div>                        
-                    </div>
-
-                    <div class="col-6 div-sede" id="pinos">
-                        <div class="sede-selector">
-                            <div class="div-sede-img">
-                                <!-- <img src="" alt="Imagen de Sede 1" /> -->
-                            </div>
-                            <div class="div-sede-info">
-                                <span>Los Pinos</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 div-sede" id="ecatepec">
-                        <div class="sede-selector">
-                            <div class="div-sede-img">
-                                <!-- <img src="" alt="Imagen de Sede 1" /> -->
-                            </div>
-                            <div class="div-sede-info">
-                                <span>Ecatepec</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-6 div-sede" id="central">
-                        <div class="sede-selector">
-                            <div class="div-sede-img">
-                                <!-- <img src="" alt="Imagen de Sede 1" /> -->
-                            </div>
-                            <div class="div-sede-info">
-                                <span>Central de abastos</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="col-12 noPadd parallaxWindow">
+                <img src="img/calaveras/bgParallax1.png" alt="bgParallax1" id="bgParallax1" class="bgParallax1">
             </div>
-
-            <div class="col-lg-6 div-selection-container" id="selection-container">
-                <div class="row">
-                    <div class="col-12 sub-menu menuMain noPadd" id="sub-menu">                        
-                        <ul>
-                            <li class="sede-info active" id="sede-inicio">inicio</li>
-                            <li class="sede-info avoid-clicks" id="sede-info">información</li>
-                            <li class="sede-info avoid-clicks" id="sede-subposter">poster</li>
-                            <li class="sede-info avoid-clicks" id="sede-programa">programa</li>
-                        </ul>
+            <div class="col-12 bgParallaxContent">
+               <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="img/calaveras/calacasLogo.png" alt="" id="calacasLogo">
                     </div>
-                </div>
-                
-                <div class="row selection-main-block">
-                    <!-- main poster window -->
-                    <div class="col-12 div-selection-main main-poster selected" id="sede-poster">
-                        <a href="img/calaveras/posterGeneralHigh.jpg" target="_blank">
-                            <img src="img/calaveras/posterGeneralLow.jpg" class="posterImage" alt="imagen de poster"/>
+                    <div class="col-12 text-center">
+                        <a href="img/calaveras/cartel.pdf" target="_blank">
+                            <img src="img/calaveras/cartelBanner.png" alt="" id="link al cartel" class="cartelBanner" />
                         </a>                        
                     </div>
+               </div>
+            </div>
 
-                    <!-- CENART window -->
-                    <div class="col-12 div-selection-main" id="sede-cenart">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <div class="selection-main-title">
-                                    Sede: CENART
-                                </div>
-                                <div class="selection-main-description">
-                                    Conoce la programación aquí:
-                                    <ul>
-                                        <li onClick="showCartSelected(this)" data-sede="cenart">Laboratorios creativos</li>
-                                        <li onClick="showCartSelected(this)" data-sede="cenart">Presentaciones artísticas</li>
-                                        <li onClick="showCartSelected(this)" data-sede="cenart">Exposiciones</li>
-                                        <li onClick="showCartSelected(this)" data-sede="cenart">Narraciones orales</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="selection-main-pic">
-                                    <!-- <img src="" alt=""> -->
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-12 main-info">
+                <img src="img/calaveras/flor.png" alt="" id="floatFlowerLeft">
+                <img src="img/calaveras/flor.png" alt="" id="floatFlowerRight">
+                <span> Lorem ipsum dolor sit amet, consectetur adipiscing. </span> <br><br>                
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus enim, cursus commodo elit ut, iaculis ultricies leo. Nulla sodales egestas sapien, eget placerat dui semper nec. In sed est dui. Aenean sagittis magna in purus sodales, molestie venenatis mauris molestie. Nullam sagittis est ac egestas eleifend. Quisque et arcu eu enim interdum gravida sit amet non diam. Donec molestie tellus et bibendum feugiat. Donec mi turpis, malesuada sit amet augue et, molestie laoreet arcu. Integer bibendum mattis dignissim.
+            </div>
 
-                        <div class="row">                            
-                            <div class="col-sm-7 selection-main-map">
-                                <a href="https://g.page/centronacionaldelasartes?share" target="_blank">
-                                    <img src="img/calaveras/mapaCENART.JPG" alt="Mapa del CENART">
-                                </a>
-                                
-                            </div>
-                            <div class="col-sm-5 selection-main-map-info">
-                                <span>Centro Nacional de las Artes</span> <br>
-                                Av. Río Churubusco 79, Country Club Churubusco, 04220 Ciudad de México, CDMX <br>
-                                <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a>
-                            </div>
-                        </div>
-
-                        <div class="row hidden-row">
-                            <div class="col-12 text-center hidden-load-container">
-                                <img src="img/loader.gif" alt="animacion de loader">
-                            </div>
-                            <div class="col-12 hidden-info-window">
-                                debo estar oculta
-                            </div>
-                        </div>
+            <div class="col-12 sedes-menu-block">
+                <div class="row">
+                    <div class="col-12 noPadd parallaxWindow2">
+                        <img src="img/calaveras/bgParallax2.png" alt="bgParallax2" id="bgParallax2" class="bgParallax2">
                     </div>
-
-                    <!-- Los Pinos window -->
-                    <div class="col-12 div-selection-main" id="sede-pinos">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <div class="selection-main-title">
-                                    Sede: Los Pinos
-                                </div>
-                                <div class="selection-main-description">
-                                    Conoce la programación aquí:
-                                    <ul>
-                                        <li onClick="showCartSelected(this)" data-sede="pinos">Laboratorios creativos</li>
-                                        <li onClick="showCartSelected(this)" data-sede="pinos">Presentaciones artísticas</li>
-                                        <li onClick="showCartSelected(this)" data-sede="pinos">Exposiciones</li>
-                                        <li onClick="showCartSelected(this)" data-sede="pinos">Narraciones orales</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="selection-main-pic">
-                                    <!-- <img src="" alt=""> -->
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">                            
-                            <div class="col-sm-7 selection-main-map">
-                                <a href="https://goo.gl/maps/k6M8Gomg2g1i99Mn7" target="_blank">
-                                    <img src="img/calaveras/mapaPinos.JPG" alt="Mapa del Los Pinos">
-                                </a>
-                                
-                            </div>
-                            <div class="col-sm-5 selection-main-map-info">
-                                <span>Los Pinos</span> <br>
-                                Calle Parque Lira S/N, Bosque de Chapultepec I Secc, 11850 Ciudad de México, CDMX <br>
-                                <a href="https://www.lospinosparatodos.com/">https://www.lospinosparatodos.com/</a>
-                            </div>
-                        </div>
-
-                        <div class="row hidden-row">
-                                <div class="col-12 text-center hidden-load-container">
-                                    <img src="img/loader.gif" alt="animacion de loader">
-                                </div>
-                                <div class="col-12 hidden-info-window">
-                                    debo estar oculta
-                                </div>
-                            </div>
-                    </div>
-
-                    <!-- Ecatepec window -->
-                    <div class="col-12 div-selection-main" id="sede-ecatepec">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <div class="selection-main-title">
-                                    Sede: Ecatepec
-                                </div>
-                                <div class="selection-main-description">
-                                    Conoce la programación aquí:
-                                    <ul>
-                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Laboratorios creativos</li>
-                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Presentaciones artísticas</li>
-                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Exposiciones</li>
-                                        <li onClick="showCartSelected(this)" data-sede="ecatepec">Narraciones orales</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="selection-main-pic">
-                                    <!-- <img src="" alt=""> -->
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">                            
-                            <div class="col-sm-7 selection-main-map">
-                                <a href="https://goo.gl/maps/c93rKWyXz91zA5GZ6" target="_blank">
-                                    <img src="img/calaveras/mapaEcatepec.JPG" alt="Mapa del CENART">
-                                </a>                                
-                            </div>
-                            <div class="col-sm-5 selection-main-map-info">
-                                <span>Ecatepec</span> <br>
-                                <!-- Av. Río Churubusco 79, Country Club Churubusco, 04220 Ciudad de México, CDMX <br> -->
-                                <!-- <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a> -->
-                            </div>
-                        </div>                        
-
-                        <div class="row hidden-row">
-                                <div class="col-12 text-center hidden-load-container">
-                                    <img src="img/loader.gif" alt="animacion de loader">
-                                </div>
-                                <div class="col-12 hidden-info-window">
-                                    debo estar oculta
-                                </div>
-                            </div>
-                    </div>
-
-                    <!-- Central window -->
-                    <div class="col-12 div-selection-main" id="sede-central">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <div class="selection-main-title">
-                                    Sede: Central de abastos
-                                </div>
-                                <div class="selection-main-description">
-                                    Conoce la programación aquí:
-                                    <ul>
-                                        <li onClick="showCartSelected(this)" data-sede="central">Laboratorios creativos</li>
-                                        <li onClick="showCartSelected(this)" data-sede="central">Presentaciones artísticas</li>
-                                        <li onClick="showCartSelected(this)" data-sede="central">Exposiciones</li>
-                                        <li onClick="showCartSelected(this)" data-sede="central">Narraciones orales</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="selection-main-pic">
-                                    <!-- <img src="" alt=""> -->
-                                </div>
-                            </div>
-                        </div>                        
-
-                        <div class="row">                            
-                            <div class="col-sm-7 selection-main-map">
-                                <a href="https://goo.gl/maps/t7xVT5RPFCczCCvS7" target="_blank">
-                                    <img src="img/calaveras/mapaCentral.JPG" alt="Mapa de la central de abastos">
-                                </a>
-                            </div>
-                            <div class="col-sm-5 selection-main-map-info">
-                                <span>Central de Abastos</span> <br>
-                                Canal Río Churubusco s/n, Área Federal Central de Abastos, 09040 Ciudad de México, CDMX <br>
-                                <!-- <a href="https://www.cenart.gob.mx/">https://www.cenart.gob.mx/</a> -->
-                            </div>
-                        </div>              
-
-                        <div class="row hidden-row">
-                                <div class="col-12 text-center hidden-load-container">
-                                    <img src="img/loader.gif" alt="animacion de loader">
-                                </div>
-                                <div class="col-12 hidden-info-window">
-                                    debo estar oculta
-                                </div>
+                    <div class="col-12 bgParallaxContent2">
+                            <div class="row">
+                                 <div class="col-12 text-center">
+                                     Elige una sede
+                                 </div>
                             </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-3 col-6 sedes-menu-element">
+                        <img src="img/calaveras/papel1.png" alt="boton cenart" id="btn-cenart" />
+                    </div>
+                    <div class="col-md-3 col-6 sedes-menu-element">
+                        <img src="img/calaveras/papel2.png" alt="boton los pinos" id="btn-pinos" />
+                    </div>                    
+                    <div class="col-md-3 col-6 sedes-menu-element">
+                        <img src="img/calaveras/papel3.png" alt="boton central de abastos" id="btn-central" />
+                    </div>
+                    <div class="col-md-3 col-6 sedes-menu-element">
+                        <img src="img/calaveras/papel4.png" alt="boton ecatepec" id="btn-ecatepec" />
+                    </div>
+                </div>
             </div>
+
+            <div class="col-12 window-menu-block">
+                <div class="row">
+                    <div class="col-sm-4 window-menu-element">
+                        <img src="img/calaveras/botonColor1.png" alt="" id="action-general">
+                        <div>General</div>
+                    </div>
+                    <div class="col-sm-4 window-menu-element">
+                        <img src="img/calaveras/botonColor2.png" alt="" id="action-videos">
+                        <div>Videos</div>
+                    </div>
+                    <div class="col-sm-4 window-menu-element">
+                        <img src="img/calaveras/botonColor3.png" alt="" id="action-progra">
+                        <div>Programación</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-10 offset-sm-1 info-window" id="info-window">
+            </div>
+            
         </div>
 
         <div class="row footer">
             <div class="col-12 footer-ayr">
                 <div class="row">
-                    <div class="col-4 sub-div">
+                    <div class="col-sm-4 sub-div">
                         <span>Estamos en:</span> <br><br>
 
                         <a href="https://www.google.com.mx/maps/place/Secretar%C3%ADa+de+Cultura/@19.4308637,-99.1607373,21z/data=!4m5!3m4!1s0x0:0x581dc9dfb95e46b8!8m2!3d19.4309837!4d-99.1606557?shorturl=1">
@@ -351,13 +157,13 @@
                         Teléfono: <a href="4155-0200">4155-0200 ext 9320</a> <br>
                         correo-e: <a href="alasyraices@cultura.gob.mx">alasyraices@cultura.gob.mx</a>
                     </div>
-                    <div class="col-4 sub-div"> 
+                    <div class="col-sm-4 sub-div"> 
                         <a href="https://www.alasyraices.gob.mx/"> <img src="img/ayr2.png" alt="Logo alas y raíces" /> </a><br>
                             Derechos reservados © Secretaría de Cultura,
                             Coordinación Nacional de Desarrollo Cultural Infantil,
                             Programa nacional Alas y Raíces, México, 2019.
                     </div>
-                    <div class="col-4 sub-div">
+                    <div class="col-sm-4 sub-div">
                         Síguenos en nuestras redes: <br> <br>
                         <a href="https://www.facebook.com/alasyraicescultura/"> <i class="fab fa-2x fa-facebook-f"></i> </a> &nbsp;
                         <a href="https://twitter.com/alasyraices"> <i class="fab fa-2x fa-twitter"></i> </a> &nbsp;
@@ -366,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="col-12 footer-gob">
+            <!-- <div class="col-12 footer-gob">
                 <img src="img/fondoFooter.png" alt="" id="pleca-gob">
                 <div class="row">
                     <div class="col-12">
@@ -412,14 +218,19 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <!-- dynamic background -->
-    <div class="dynamicBG active posterBG" id="dynamicBG"></div>
+    <div class="dynamicBG cenart" id="dynamicBG">
+        <div class="innerDynamic">
+
+        </div>
+    </div>
+
 </body>
 <script src="js/common.js"></script>
-<script src="js/calaveras/behaviour.js"></script>
 <script src="js/calaveras/cartelera.js"></script>
+<script src="js/calaveras/behaviour.js"></script>
 </html>
