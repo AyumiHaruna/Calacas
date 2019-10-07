@@ -344,11 +344,12 @@ nav{
         .window-menu-block{
             text-align: center;
             height: 100vw;
-            margin-bottom: 10vw;
+            margin-bottom: 15vw;
+            padding: 0vw;
         }
         .window-menu-element{
             padding-top:  0vw;
-            font-size: 6vw;
+            font-size: 6.5vw;
             margin-bottom: 5vw;
         }
         .window-menu-element img{
@@ -363,7 +364,8 @@ nav{
         .window-menu-element div{
             position: absolute;
             top: 10vw;
-            width: 100%;    
+            width: 100%; 
+            left: 0vw;   
             text-align: center;
         }
     }

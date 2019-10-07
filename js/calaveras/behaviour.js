@@ -169,7 +169,7 @@ function drawInfo(action){
         toPrint = `
         <div class="sedeTitle">
             ${data.sede}  <br>
-            <span class="subtitle">(Información General)</span>
+            <span class="subtitle">(Videos)</span>
         </div>
         <div class="row justify-content-md-center infoBlock">`;
 
