@@ -14,6 +14,8 @@
 
 html{
     scroll-behavior: smooth;
+    width: 100vw;
+    overflow: hidden;
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -24,6 +26,7 @@ body{
 .noPadd{
     padding: 0;
 }
+
 
 
 .dynamicBG{
@@ -306,6 +309,9 @@ nav{
     font-size: 2vw;
     font-family: 'albertus-medium';
     letter-spacing: 3.5px;
+}
+.window-menu-element div{
+    pointer-events: none;
 }
 .window-menu-element.active {
     animation: floating 2s ease-in-out infinite;
