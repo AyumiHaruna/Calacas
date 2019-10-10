@@ -21,13 +21,21 @@ const infoWindow = document.getElementById('info-window');
 var sedeSelected = 'cenart';
 
 //parallax background
-var parallax1 = document.getElementsByClassName('bgParallax1');
-var parallax2 = document.getElementsByClassName('bgParallax2');
+const parallax1 = document.getElementsByClassName('bgParallax1');
+const parallax2 = document.getElementsByClassName('bgParallax2');
+const parallax3 = document.getElementsByClassName('bgParallax3');
+
+//elements to fix mainLogo on scroll
+const calacasLogo = document.getElementById("calacasLogo");
+const mainInfoWindow = document.getElementById('main-info');
+const mainInfoHeight = mainInfoWindow.offsetHeight;
+const mainInfoYTop = mainInfoWindow.getBoundingClientRect().top;
 
 
 //----------------------------------------------
             //INITIAL STATE
-//----------------------------------------------        
+//----------------------------------------------   
+    calacasLogo.style.opacity = (mainInfoHeight - document.documentElement.scrollTop) / mainInfoHeight;
     toggleSedeButton();
     toggleDynamicBG();
     toggleActBtn('action-progra');
@@ -37,10 +45,16 @@ var parallax2 = document.getElementsByClassName('bgParallax2');
             //PARALLAX BACKGROUND
 //----------------------------------------------
 new simpleParallax(parallax1, {
-    scale: 1.5
+    orientation: 'down',
+    scale: 1.5,
+    transition: 'ease-out',
 });
 new simpleParallax(parallax2, {
     scale: 1.5
+});
+new simpleParallax(parallax3, {
+    orientation: 'down',
+    scale: 1.2,
 });
 
 //----------------------------------------------
@@ -52,8 +66,8 @@ arrayBtnSedes.forEach( (div) => {
         sedeSelected = (div.id).replace('btn-', '');
         toggleSedeButton();
         toggleDynamicBG();
-        toggleActBtn('action-general');
-        drawInfo('action-general');
+        toggleActBtn('action-progra');
+        drawInfo('action-progra');
         actionBtnGeneral.scrollIntoView();
     });
 });
@@ -66,6 +80,11 @@ arrayBtnAction.forEach( (elm) => {
         // document.querySelector('.sedeTitle').scrollIntoView();
     });
 });
+
+window.addEventListener('scroll', () => {
+        calacasLogo.style.opacity = (mainInfoHeight - document.documentElement.scrollTop) / mainInfoHeight;
+})
+
 
 
 //----------------------------------------------

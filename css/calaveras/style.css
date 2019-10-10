@@ -125,7 +125,7 @@ nav{
             /*PARALLAX WINDOW STYLES*/
 /*  ------------------------------------------  */
 .parallaxWindow {
-    height: 35vw;
+    height: 55vw;
     overflow: hidden;
     z-index: 1;
 }
@@ -134,41 +134,67 @@ nav{
     position: relative;
 }
 #bgParallax1{
-  width: 100%;
+    margin-top: 8.5vw;
+    margin-left: 15vw;
+    width: 68%;
 }
 .bgParallaxContent{
-    background-color: rgba(0, 0, 0, 0.65);
-    height: 35vw;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 55vw;
     width: 100vw;
     position: absolute;
     z-index: 2;
 }
- 
-#calacasLogo {
+
+.calacasLogo {
+    position: fixed;
+    margin: auto;
     margin-top: 2vw;
     width: 30%;
+    left: 35vw;
+    pointer-events: none;
 }
+
 .cartelBanner{
     width: 50%;
 }
-    @media (max-width: 576px) {
+    @media (max-width: 1200px) {
         .parallaxWindow {
-            height: 100vw;
+            height: 60vw;
+        }
+        #bgParallax1{
+            margin-top: 20vw;
         }
         .bgParallaxContent{
-            height: 100vw;
+            height: 60vw;
+        }
+    }
+    @media (max-width: 992px) {
+        .parallaxWindow {
+            height: 65vw;
+        }
+        #bgParallax1{
+            margin-top: 20vw;
+        }
+        .bgParallaxContent{
+            height: 65vw;
+        }
+    }
+    @media (max-width: 576px) {
+        .parallaxWindow {
+            height: 80vw;
+        }
+        .bgParallaxContent{
+            height: 80vw;
         }
         #calacasLogo {
             margin-top: 3vw;
-            width: 80%;
-        }
-        .cartelBanner{
-            margin-top: 10vw;
-            width: 95%;
+            width: 50%;
+            left: 27vw;
         }
         #bgParallax1{
-            width: 200%;
-            margin-left: -40vw;
+            width: 70%;    
+            margin-top: 22vw;        
         }
     }
 
@@ -335,27 +361,27 @@ nav{
     color: #fb644c;    
 }
 .window-menu-element:nth-child(2){
-    color: #b8a5fe;
+    color: #c5ffa4;
 }
 .window-menu-element:nth-child(3){
-    color: #c5ffa4;
+    color: #b8a5fe;
 }
     @media (max-width: 576px) {
         .window-menu-block{
             text-align: center;
-            height: 100vw;
+            height: 85vw;
             margin-bottom: 15vw;
             padding: 0vw;
         }
         .window-menu-element{
             padding-top:  0vw;
-            font-size: 6.5vw;
+            font-size: 5vw;
             margin-bottom: 5vw;
         }
         .window-menu-element img{
             background-color: rgba(255,255,255, 0.2);
             position: relative;
-            width: 90%;
+            width: 70%;
             margin: auto;
             cursor: pointer;
             left: 0;
@@ -363,7 +389,7 @@ nav{
         }
         .window-menu-element div{
             position: absolute;
-            top: 10vw;
+            top: 8vw;
             width: 100%; 
             left: 0vw;   
             text-align: center;
@@ -379,8 +405,7 @@ nav{
 .info-window{
     background-color: rgba(0,0,0, 0.4);
     border-radius: 3px;
-    margin-top: 0;
-    margin-bottom: 5vw;
+    margin-top: 0;    
     padding: 3vw;
 }
 
@@ -420,11 +445,11 @@ nav{
     }
     @media (max-width: 576px) {
         .info-window{
-            padding-bottom: 10vw;
+            padding-bottom: 5vw;
         }
         .sedeTitle{
             margin: auto;
-            margin-top: -8vw;
+            margin-top: -10vw;
             width: 90%;    
             font-size: 1.8em;
             line-height: 1em;
@@ -507,7 +532,7 @@ nav{
 .collapsible {
     display: flex;
     align-items: center;
-    height: 9vw;
+    height: 7vw;
     background-color: #931f7a;
     color: white;
     cursor: pointer;
@@ -517,7 +542,7 @@ nav{
     border-bottom: solid 1px #420f37
 }
 .collapsible img{
-    width: 8vw;
+    width: 7vw;
 }
 .collapsible ~ .collapsible{
     border-radius: 0px;
@@ -591,11 +616,11 @@ nav{
             width: 10%;
         }
         .collapsible {
-            height: 20vw;
+            height: 15vw;
             font-size: 1.3em;
         }
         .collapsible img{
-            width: 20vw;
+            width: 15vw;
         }
         .actividad{
             font-weight: 900;
@@ -617,6 +642,24 @@ nav{
         }
         .act-hr hr{
             border-top: 3px solid #0073b0;
+        }
+    }
+
+
+    .parallaxWindow3 {
+        height: 10vw;
+        overflow: hidden;
+        z-index: 1;
+        margin-bottom: 5vw;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    #bgParallax3{
+      width: 100%;      
+    }    
+    @media (max-width: 576px) {
+        .parallaxWindow3 {
+            height: 20vw;
         }
     }
 
