@@ -381,7 +381,7 @@ const cartelera = {
         }
     },
     "central": {
-        "sede": "Central de abastos",
+        "sede": "Central de abasto",
         "horarios": "de 12:00pm a 17:00pm",
         "direccion": "Av. Canal de Río Churubusco s/n Esq. Canal de Apatlaco, Col Central de Abastos, Alcaldía Iztapalapa, C.P. 09040",
         "mapOverview": "img/calaveras/mapaCentral.JPG",
