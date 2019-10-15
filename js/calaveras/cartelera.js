@@ -10,12 +10,12 @@ const cartelera = {
         "actividades": {
             "Laboratorios creativos": {
                 "1":{
-                    "nombre": "laboratorio # 1",
+                    "nombre": `Soy un nombre "con comillas" <br> ahora otro texto `,
                     "sede": "Centro Nacional de las Artes",
                     "area": "Escenario principal",
                     "fecha": "20 de Septiembre del 2019",
                     "hora": "de 8:00am a 6:00pm",
-                    "descripción": `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    "descripción": `Lorem "ipsum dolor sit amet, consectetur" adipiscing elit. 
                     Quisque aliquet hendrerit purus, volutpat feugiat mauris rhoncus fringilla. 
                     Proin nec ligula viverra, pretium tortor non, pretium purus. 
                     Vestibulum ante ipsum prims in faucibus orci luctus et ultrices

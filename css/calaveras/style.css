@@ -711,8 +711,7 @@ nav{
     font-family: 'Montserrat', sans-serif;
     padding: 0;
     background-color:  #7E3353;
-    background-size: cover;
-    color: #fff;    
+    color: #fff; 
 }
 .footer-gob #pleca-gob{
     width: 100vw;
@@ -746,6 +745,14 @@ nav{
 .footer-gob4 span{
     text-decoration: underline;
 }
+    @media (max-width: 576px) {
+        .footer-gob #pleca-gob{
+            width: 300vw;
+        }
+        .footer-gob .sub-div{
+            padding: 4vw 10vw 4vw 10vw;
+        }
+    }
 
 
 
