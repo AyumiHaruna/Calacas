@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');}
+
 @font-face {
     font-family: 'albertus'; 
     src: url('../../webfonts/albertus/ALBMTL_S.TTF');
@@ -134,7 +136,7 @@ nav{
     position: relative;
 }
 #bgParallax1{
-    margin-top: 8.5vw;
+    margin-top: 8.2vw;
     margin-left: 15vw;
     width: 68%;
 }
@@ -307,6 +309,11 @@ nav{
     filter: brightness(100%);
     width: 75%;
 }
+    @media (max-width: 992px) {
+        .bgParallaxContent2{
+            font-size: 1.8em;
+        }
+    }
     @media (max-width: 576px) {
         .parallaxWindow2 {
             height: 30vw;
@@ -519,8 +526,8 @@ nav{
 
 
 .dwnBlock{
-    text-align: center;
-    font-size: 1.5em;
+    text-align: right;
+    font-size: 1.1em;
 }
 .dwnBlock a{
     color: #f7c6a1;
@@ -570,21 +577,59 @@ nav{
     background-image: url('../../img/calaveras/wall2.png');
     background-size:contain;
     color: #000;
-    padding: 1.5vw 3vw;
-    font-weight: 900;
+    padding: 1.5vw 1.5vw;
+    font-weight: 500;
     margin-bottom: 1.5vw;
     height: 35vw;
-}
-.act-header{
-    font-weight: bold;
-    font-size: 1.5em;
-    color: #0073b0;
-    letter-spacing: 2px;
-}
-.act-body{
-    margin-top: 1vw;
-    max-height: 15vw;
     overflow: auto;
+}
+
+.act-nombre{
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: center;
+    color: #0073b0;
+}
+.act-descripcion{
+    font-weight: 800;
+    text-align: right;
+    font-size: 0.9em;
+}
+.act-delegacion{
+    text-align: right;
+    font-size: 0.9em;
+    background-color: #59144a;
+    color: #fff;    
+    padding: 0 1.5vw;
+    font-weight: 800;
+    border-radius: 3px;
+}
+.act-tallerista{
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom:  1vw;
+}
+.act-tallerista span{
+    color: #931f7a;
+}
+.act-area,
+.act-horario{
+    font-size: 1em;
+    font-weight: 800;
+}
+.act-area span{
+    font-weight: 800;
+    color: #7E3353;
+}
+.act-horario span{
+    font-weight: 500;
+}
+.act-sinopsis,
+.act-horario{
+    margin-bottom: 1vw;
+}
+.act-sinopsis{
+    font-weight: 500;
 }
 .act-area,
 .act-fecha,
@@ -594,6 +639,7 @@ nav{
 .act-hr hr{
     border-top: 5px solid #0073b0;
 }
+
     @media (max-width: 1200px) { 
         .act-body{
             max-height: 10vw;
@@ -607,16 +653,23 @@ nav{
         .act-body{
             max-height: 15vw;
         }
+        .collapsible {
+            height: 13vw;
+            font-size: 1.3em;
+        }
+        .collapsible img{
+            width: 12vw;
+        }
     }
     @media (max-width: 576px) {
         .dwnBlock{
-            font-size: 1.3em;
+            font-size: 1em;
         }
         .dwnBlock img{
             width: 10%;
         }
         .collapsible {
-            height: 15vw;
+            height: 17vw;
             font-size: 1.3em;
         }
         .collapsible img{
@@ -646,20 +699,63 @@ nav{
     }
 
 
-    .parallaxWindow3 {
-        height: 10vw;
-        overflow: hidden;
-        z-index: 1;
-        margin-bottom: 5vw;
-        border-bottom-left-radius:10px;
-        border-bottom-right-radius:10px;
+.parallaxWindow3 {
+    height: 10vw;
+    overflow: hidden;
+    z-index: 1;
+}
+.parallaxWindow3     > * {
+    height: 100%;
+    position: relative;
+}
+.bgParallaxContent3 {
+    background-color: rgba(0, 0, 0, 0.65);
+    height: 10vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: #f7c6a1;
+    text-decoration: none;
+    font-size: 1.8em;
+    letter-spacing: 1.5px;
+    padding: 3vw;
+}
+.bgParallaxContent3 a{
+    color: #f7c6a1;
+    font-weight: 500;
+}
+#bgParallax3    {
+    width: 100%;
+}
+    @media (max-width: 1200px) {
+        .parallaxWindow3 {
+            height: 12vw;
+        }
+        .bgParallaxContent3 {
+            height: 12vw;
+        }
     }
-    #bgParallax3{
-      width: 100%;      
-    }    
+    @media (max-width: 992px) {
+        .parallaxWindow3 {
+            height: 12vw;
+        }
+        .bgParallaxContent3 {
+            height: 12vw;
+            padding: 2vw;
+            font-size: 1.5em;
+        }
+    }
     @media (max-width: 576px) {
         .parallaxWindow3 {
-            height: 20vw;
+            height: 22vw;
+        }
+        .bgParallaxContent3 {
+            height: 22vw;
+            font-size: 1.2em;
+            padding: 5vw;
         }
     }
 
@@ -668,6 +764,7 @@ nav{
             /*FOOTER STYLES*/
 /*  ------------------------------------------  */
 .footer-ayr{
+    margin-top: 5vw;
     background-color: #552962;
     padding: 1vw 2vw 1vw 2vw;
     font-size: 1.1em;
@@ -702,6 +799,7 @@ nav{
     @media (max-width: 576px) {
         .footer-ayr{
             text-align: center;
+            padding: 5vw;
         }
     }
 
@@ -736,6 +834,9 @@ nav{
 .footer-gob1{
     text-align: center;
 }
+.footer-gob1 div{
+    margin-bottom: 5vw;
+}
 .footer-gob1 img{
     width: 80%;
 }
@@ -751,6 +852,9 @@ nav{
         }
         .footer-gob .sub-div{
             padding: 4vw 10vw 4vw 10vw;
+        }
+        .footer-gob1 div{
+            margin-bottom: 8vw;
         }
     }
 

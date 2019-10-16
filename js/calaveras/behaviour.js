@@ -18,7 +18,7 @@ const arrayBtnAction = [actionBtnGeneral, actionBtnVideos, actionBtnProgra]
 const infoWindow = document.getElementById('info-window');
 
 // flags
-var sedeSelected = 'cenart';
+var sedeSelected = 'central';
 
 //parallax background
 const parallax1 = document.getElementsByClassName('bgParallax1');
@@ -234,7 +234,7 @@ function drawInfo(action){
             <div class="col-12 dwnBlock">
                 <a href="${data.programa}" target="_bank">
                     <img src="img/calaveras/dwnIco.png" alt"boton descarga de programación"/> <br>
-                    Descargar programación completa
+                    Descarga la programación completa
                 </a>
             </div>`;
 
@@ -262,22 +262,41 @@ function drawInfo(action){
                         <div class="row">`;
 
                 for( var elm in data.actividades[actividad]){
+                    
                     toPrint += `
-                        <div class="col-sm-4 act-content">
+                        <div class="col-12 col-md-6 col-lg-4 act-content">
                             <div class="actividad">
-                                <div class="act-header">
+                                <div class="act-nombre">
                                     ${data.actividades[actividad][elm]["nombre"]}
+                                </div>               
+                                <div class="act-descripcion">
+                                    ${data.actividades[actividad][elm]["descripcion"]}
                                 </div>                                
+                                <div class="act-delegacion">
+                                    ${data.actividades[actividad][elm]["delegacion"]}
+                                </div>                                
+                                <div class="act-tallerista">`
+                                    if( data.actividades[actividad][elm]["tallerista"] != "" ){
+                                        toPrint += `Elenco: <span>${data.actividades[actividad][elm]["tallerista"]}</span>`;
+                                    }
+                                    
+                    toPrint +=  `</div>               
+                                <div class="act-sinopsis">
+                                    ${data.actividades[actividad][elm]["sinopsis"]} 
+                                </div>
                                 <div class="act-area">
-                                    ${data.actividades[actividad][elm]["area"]}
+                                    Área: <span>${data.actividades[actividad][elm]["area"]}</span>
                                 </div>
-                                <div class="act-fecha">
-                                    ${data.actividades[actividad][elm]["fecha"]} <br>
-                                    ${data.actividades[actividad][elm]["hora"]}
+                                <div class="act-horario">
+                                    Horario(s): <span>${data.actividades[actividad][elm]["horario"]}</span>
                                 </div>
-                                <div class="act-body">
-                                    ${data.actividades[actividad][elm]["descripción"]}  <br>  
+                                <div class="act-publico">
+                                    Para ${data.actividades[actividad][elm]["publico"]}
                                 </div>
+                                <div class="act-obs">
+                                    ${data.actividades[actividad][elm]["observaciones"]}
+                                </div>
+                                
                                 <div class="act-hr">
                                     <hr>
                                 </div>
@@ -303,7 +322,7 @@ function drawInfo(action){
         elm.classList.toggle('active');
 
         var elmGrow = document.getElementById(elm.dataset.target);
-        console.log(elmGrow.clientHeight);
+        // console.log(elmGrow.clientHeight);
         if (elmGrow.clientHeight != 0) {
             elmGrow.style.height = 0;
         } else {
