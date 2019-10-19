@@ -281,7 +281,7 @@ function drawInfo(action){
                                     }
                                     
                     toPrint +=  `</div>               
-                                <div class="act-sinopsis">
+                                <div class="act-sinopsis text-justify">
                                     ${data.actividades[actividad][elm]["sinopsis"]} 
                                 </div>
                                 <div class="act-area">
