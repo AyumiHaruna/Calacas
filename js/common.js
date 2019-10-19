@@ -1,5 +1,38 @@
 //this code is from https://gist.github.com/mpetroff/4666657beeb85754611f */
 //toggle menu without jquery
+// Obtiene ubicación del usuario
+
+// Ubicacion usuario
+function distance(lon1, lat1, lon2, lat2) {
+    let R = 6371; // Radius of the earth in km
+    let dLat = (lat2-lat1).toRad();  // Javascript functions in radians
+    let dLon = (lon2-lon1).toRad(); 
+    let a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+            Math.sin(dLon/2) * Math.sin(dLon/2); 
+    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    let d = R * c; // Distance in km
+    return d;
+  }
+  
+  /** Converts numeric degrees to radians */
+  if (typeof(Number.prototype.toRad) === "undefined") {
+    Number.prototype.toRad = function() {
+      return this * Math.PI / 180;
+    }
+  }
+  
+  navigator.geolocation.getCurrentPosition(function(pos) {
+    console.log(pos); 
+    console.log(
+      distance(pos.coords.longitude, pos.coords.latitude, 42.37, 71.03)
+    ); 
+  });
+
+
+
+
+
 let collapseElements = document.querySelectorAll('[data-toggle="collapse"]');
 const CLASS_SHOW = 'show';
 const CLASS_COLLAPSE = 'collapse';
