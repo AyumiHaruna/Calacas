@@ -15,7 +15,6 @@ function distance(lon1, lat1, lon2, lat2) {
     return d;
   }
   
-  /** Converts numeric degrees to radians */
   if (typeof(Number.prototype.toRad) === "undefined") {
     Number.prototype.toRad = function() {
       return this * Math.PI / 180;
@@ -23,9 +22,25 @@ function distance(lon1, lat1, lon2, lat2) {
   }
   
   navigator.geolocation.getCurrentPosition(function(pos) {
-    console.log(pos); 
+    //   CENART
+      let cnaLat= 19.356584
+      let cnaLon =-99.1420677
+    //   Los Pinos
+      let pinoLat=19.4156636
+      let pinoLon=-99.1934009
+    //   Central de abasto
+      let caLat=19.3740039
+      let caLon= -99.0952915
+    //   Ecatepec
+      let ecLat=19.5720072
+      let ecLon=-99.1172226
+
+    console.log(pos.coords.longitude); 
     console.log(
-      distance(pos.coords.longitude, pos.coords.latitude, 42.37, 71.03)
+      distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat),
+      distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat),
+      distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat),
+      distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ); 
   });
 
