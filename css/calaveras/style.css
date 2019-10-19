@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 @font-face {
     font-family: 'albertus'; 
@@ -93,7 +93,7 @@ nav{
     color: #a9aeb2;
 }
 .nav-item.active a{
-    color: #475258;]
+    color: #475258;
 }
 
 .sub-nav{
@@ -280,7 +280,7 @@ nav{
     padding: 3vw;
 }
 #bgParallax2{
-  width: 100%;
+  width: 90%;
 }
 
 .sedes-menu-block{
@@ -296,8 +296,8 @@ nav{
 }
 .sedes-menu-element img{
     width: 65%;
-    -webkit-filter: brightness(50%); 
-    filter: brightness(50%);
+    -webkit-filter: brightness(65%); 
+    filter: brightness(65%);
 }
 .sedes-menu-element img:hover{
     cursor: pointer;
@@ -308,6 +308,7 @@ nav{
     -webkit-filter: brightness(100%); 
     filter: brightness(100%);
     width: 75%;
+    box-shadow: 0px 2px 20px 5px rgba(158, 202, 237,0.75), inset 0px 0px 80px 5px rgba(158, 202, 237,0.75);
 }
     @media (max-width: 992px) {
         .bgParallaxContent2{

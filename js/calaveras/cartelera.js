@@ -396,7 +396,7 @@ const cartelera = {
                     "horario": "12:00, 13:00, 15:00 y 16:00 horas",
                     "publico": "niños y niñas de 8 a 12 años de edad",
                     "observaciones": "",
-                    "delegacion": "texto de prueba" ,
+                    "delegacion": "" ,
                 },
                 "2":{
                     "nombre": "\"Calacas acartonadas\" ",
@@ -729,11 +729,11 @@ const cartelera = {
                     "delegacion": "" ,
                 },
                 "4":{
-                    "nombre": "\"Cuando la muerte sea rima: La Catrina vs El Patas de Cabra.\" ",
+                    "nombre": "\"Cuando la muerte sea rima: La Catrina vs El Nahual.\" ",
                     "descripcion": "Música tradicional y contemporánea/Controversia",
                     "tallerista": "",
                     "sinopsis": `De dos a tres caídas con límite de tiempo, una batalla de versos con los más terroríficos de ultratumba: 
-                                 en una esquina La Catrina del bando de los técnicos y en la otra esquina El Patas de Cabra del bando de los 
+                                 en una esquina La Catrina del bando de los técnicos y en la otra esquina El Nahual del bando de los 
                                  rudos.
                                  Aquí puedes participar con ellos… ¿Y tú, de qué bando eres?`,
                     "area": "Escenario principal.",

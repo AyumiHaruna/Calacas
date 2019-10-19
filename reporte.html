@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Reporte</title>
+
+        <style>
+            table, tr, th, td {
+                border: solid 1px #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="tableContainer"></div>
+    </body>
+
+
+    <script>
+        const getUrl = 'http://localhost/ayrApi/public/getData';
+        var data;
+
+        const tableContainer = document.getElementById("tableContainer");
+        
+        (async function(){
+            const getData = await fetch(getUrl);
+            data = await getData.json();                 
+
+            printTable();
+            printStatistics();
+        })()
+
+        //print table with all elements on database
+        function printTable(){
+            toPrint = `
+                <table>
+                    <thead>
+                        <td>#</td> <td>¿Como supiste de la página?</td> 
+                        <td>¿Encontraste lo que buscabas?</td> 
+                        <td>¿Qué contenidos prefieres?</td> 
+                        <td>¿Que edad tienes?</td> <td>¿Cuantos hijos tienes?</td> 
+                        <td>Edades de tus hijos</td> <td>metodo de ingreso</td> 
+                        <td>registro</td> <td>email</td>
+                    </thead>
+                    <tbody>
+            `;
+
+            data.forEach( elm => {
+                toPrint += `
+                    <tr>
+                        <td>${elm.id}</td> <td>${elm.media}</td> <td>${elm.success}</td>
+                        <td>${elm.contents}</td> <td>${elm.age}</td> <td>${elm.childs}</td>
+                        <td>${elm.childAge}</td> <td>${elm.device}</td> <td>${elm.register}</td>
+                        <td>${elm.mail}</td>
+                    </tr>
+                `;                
+            });
+
+            toPrint +=`
+                    </tbody>
+                </table>
+            `;
+
+            tableContainer.innerHTML = toPrint;
+        }
+
+        //print statistics with db info
+        function printStatistics(){
+
+        }
+        
+    </script>
+</html>
