@@ -13,13 +13,13 @@ function distance(lon1, lat1, lon2, lat2) {
     let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
     let d = R * c; // Distancia en km
     return d;
-  }
+}
   
-  if (typeof(Number.prototype.toRad) === "undefined") {
+if (typeof(Number.prototype.toRad) === "undefined") {
     Number.prototype.toRad = function() {
       return this * Math.PI / 180;
     }
-  }
+}
   
   navigator.geolocation.getCurrentPosition(function(pos) {
     //   CENART
@@ -47,6 +47,7 @@ function distance(lon1, lat1, lon2, lat2) {
         <
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ){  
+        
         console.log("Estas cerca del Cenart")
     }else if(
         distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
