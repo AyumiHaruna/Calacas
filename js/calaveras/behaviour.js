@@ -7,6 +7,7 @@ const btnPinos = document.getElementById('btn-pinos');
 const btnEcatepec = document.getElementById('btn-ecatepec');
 const btnCentral = document.getElementById('btn-central');
 const arrayBtnSedes = [btnCenart, btnPinos, btnEcatepec, btnCentral]
+const sedeBtnsYTop = btnCenart.getBoundingClientRect().top;
 
 // "action" buttons
 const actionBtnGeneral = document.getElementById('action-general');
@@ -14,11 +15,13 @@ const actionBtnVideos = document.getElementById('action-videos');
 const actionBtnProgra = document.getElementById('action-progra');
 const arrayBtnAction = [actionBtnGeneral, actionBtnVideos, actionBtnProgra]
 
+const upBtn = document.getElementById('upBtn')
+
 // main-info window
 const infoWindow = document.getElementById('info-window');
 
 // flags
-var sedeSelected = 'central';
+var sedeSelected = 'cenart';
 
 //parallax background
 const parallax1 = document.getElementsByClassName('bgParallax1');
@@ -36,10 +39,7 @@ const mainInfoYTop = mainInfoWindow.getBoundingClientRect().top;
             //INITIAL STATE
 //----------------------------------------------   
     calacasLogo.style.opacity = (mainInfoHeight - document.documentElement.scrollTop) / mainInfoHeight;
-    toggleSedeButton();
-    toggleDynamicBG();
-    toggleActBtn('action-progra');
-    drawInfo('action-progra');
+    executeChange();
 
 //----------------------------------------------
             //PARALLAX BACKGROUND
@@ -64,10 +64,7 @@ new simpleParallax(parallax3, {
 arrayBtnSedes.forEach( (div) => {
     div.addEventListener("click", () => {
         sedeSelected = (div.id).replace('btn-', '');
-        toggleSedeButton();
-        toggleDynamicBG();
-        toggleActBtn('action-progra');
-        drawInfo('action-progra');
+        executeChange();
         actionBtnGeneral.scrollIntoView();
     });
 });
@@ -77,19 +74,39 @@ arrayBtnAction.forEach( (elm) => {
     elm.addEventListener("click", () => {
         toggleActBtn( elm.id );
         drawInfo( elm.id );
-        // document.querySelector('.sedeTitle').scrollIntoView();
     });
 });
 
 window.addEventListener('scroll', () => {
         calacasLogo.style.opacity = (mainInfoHeight - document.documentElement.scrollTop) / mainInfoHeight;
+
+        if(document.documentElement.scrollTop >= 200){
+            if( !upBtn.parentElement.classList.contains("shown") ){
+                upBtn.parentElement.classList.add("shown");
+            }
+        } else {
+            if( upBtn.parentElement.classList.contains("shown") ){
+                upBtn.parentElement.classList.remove("shown");
+            }
+        }
 })
 
+upBtn.addEventListener("click", () => {
+    window.scrollTo(0,100);
+})
 
 
 //----------------------------------------------
                 //FUNCTIONS
 //----------------------------------------------
+//execute change of "sede"
+function executeChange(){
+    toggleSedeButton();
+    toggleDynamicBG();
+    toggleActBtn('action-progra');
+    drawInfo('action-progra');
+}
+
 //change border of sede selected button
 function toggleSedeButton(){
     var button = document.getElementById( 'btn-'+sedeSelected );
@@ -188,7 +205,7 @@ function drawInfo(action){
         toPrint = `
         <div class="sedeTitle">
             ${data.sede}  <br>
-            <span class="subtitle">(Videos)</span>
+            <span class="subtitle">(Live Stream)</span>
         </div>
         <div class="row justify-content-md-center infoBlock">`;
 

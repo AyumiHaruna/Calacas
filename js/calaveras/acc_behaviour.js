@@ -7,16 +7,15 @@ printInfo();
 
 //print cartelera info
 function printInfo(){
-    console.log(cartelera);
     var toPrint = ``;
 
     for( var i=0; i<(Object.keys(cartelera)).length; i++ ){
         let sede = Object.keys(cartelera)[i];
         toPrint += `
             <div class="row">
-                <div class="col-10 offset-1 acc-info-block">
+                <div class="col-lg-10 offset-lg-1 acc-info-block">
                     <div class="row">
-                        <div class="col-4 acc-title" tabindex="0">
+                        <div class="col-md-4 acc-title" tabindex="0">
                             <a name="datos ${sede}">
                                 ${cartelera[sede]["sede"]}
                             </a> <br>
@@ -24,13 +23,13 @@ function printInfo(){
                                 ${cartelera[sede]["webLink"]}
                             </a>
                         </div>
-                        <div class="col-8 acc-direccion" tabindex="0">
+                        <div class="col-md-8 acc-direccion" tabindex="0">
                             Dirección: <br>
                             <a href="${cartelera[sede]["mapLink"]}" class="link" target="_blank">
                                 ${cartelera[sede]["direccion"]}
                             </a>
                         </div>
-                        <div class="col-12 acc-horario" tabindex="0">
+                        <div class="col-md-12 acc-horario" tabindex="0">
                             Horarios: ${cartelera[sede]["horarios"]} <br> 
                             <a href="${cartelera[sede]["programa"]}" class="link" target="_blank">
                                 Descarga la programación completa del evento

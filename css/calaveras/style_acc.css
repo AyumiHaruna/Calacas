@@ -101,3 +101,51 @@
 .footer-ayr{
     margin-top: 0;
 }
+
+    @media (max-width: 576px) {
+        .acc-block-1{
+            height: 70vw;
+        }
+        #calacasLogo {
+            position: relative;
+            margin: auto;
+            margin-top: 25vw;
+            margin-bottom: 4vw;
+            width: 50%;
+            left: 22vw !important;
+        }
+        .main-info{
+            background-image: none; 
+            background-color: rgba(77, 17, 64, 0.95);
+            padding: 5vw 10vw;
+        }
+        .main-info span{
+            font-size: 1.2em;
+        }
+        .acc-block-2{
+            background-color: rgba(0,0,0,0.8);
+            padding: 5vw 2vw;
+        }
+        .acc-info-block{
+            padding: 10vw;
+            background: rgba(0,0,0, 0.7);
+            border-radius: 5px;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            color: #f7c6a1;
+        }
+        .acc-actividad-header {
+            display: flex;
+            align-items: center;
+            height: 20vw;
+            background-color: #59144a;
+            color: white;
+            cursor: pointer;
+            font-size: 1.5em;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        .acc-actividad-header img{
+            width: 18vw;
+        }
+    }
