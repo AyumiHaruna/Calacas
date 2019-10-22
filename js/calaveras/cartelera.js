@@ -287,8 +287,8 @@ const cartelera = {
                     "delegacion": "" ,
                 },
                 "5":{
-                    "nombre": "Los 400 alebrijes que no usan zapatos \n Poemas y canciones para el Día de Muertos",
-                    "descripcion": "Música",
+                    "nombre": "Los 400 alebrijes que no usan zapatos",
+                    "descripcion": "Poemas y canciones para el Día de Muertos",
                     "tallerista": "Por Indira Isel Torres Cruz y Juanjo Castamar. Presentación artística de Alas y Raíces del estado de Colima",
                     "sinopsis": `La familia Calavera, Ratamundi y el Blues de las greñas tiesas son algunas canciones que nos compartirán Indira y Juanjo para celebrar el Día de Muertos.`,
                     "area": "Plaza de las Artes",

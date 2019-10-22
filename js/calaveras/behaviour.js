@@ -276,13 +276,13 @@ function drawInfo(action){
                 
                 toPrint += `
                     <div class="col-12 coll-container" id="${actividad}">
-                        <div class="row">`;
+                        <div class="card-columns">`;
 
                 for( var elm in data.actividades[actividad]){
                     
                     toPrint += `
-                        <div class="col-12 col-md-6 col-lg-4 act-content">
-                            <div class="actividad">
+                        <div class="card act-content">
+                            <div class="card-body actividad">
                                 <div class="act-nombre">
                                     ${data.actividades[actividad][elm]["nombre"]}
                                 </div>               
@@ -339,7 +339,6 @@ function drawInfo(action){
         elm.classList.toggle('active');
 
         var elmGrow = document.getElementById(elm.dataset.target);
-        // console.log(elmGrow.clientHeight);
         if (elmGrow.clientHeight != 0) {
             elmGrow.style.height = 0;
         } else {
