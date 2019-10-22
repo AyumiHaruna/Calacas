@@ -93,6 +93,8 @@ body{
     -ms-transition: opacity 0.3s ease-out;
     -o-transition: opacity 0.3s ease-out;
     transition: opacity 0.3s ease-out;
+    border-radius: 50px;
+    overflow: hidden;
 }
 .upContainer.shown{
     opacity: 1;
