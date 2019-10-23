@@ -433,7 +433,7 @@ const cartelera = {
                     "delegacion": "Oaxaca" ,
                 },
                 "3":{
-                    "nombre":"Exposicón: El romance<br/>del maíz / hijos del maíz",
+                    "nombre":"Exposición: El romance<br/>del maíz / hijos del maíz",
                     "descripcion": "Inauguración de nueva exposición",
                     "tallerista": "",
                     "sinopsis": `Exposición inspirada en el libro el romance del maíz que muestra a través de cinco escenarios la importancia del maíz en nuestra cultura y su importancia en el mundo. Con activación de narración y presentación artística por parte del grupo la Juglaria. `,
