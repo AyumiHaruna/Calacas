@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');}
-
 @font-face {
     font-family: 'albertus'; 
     src: url('../../webfonts/albertus/ALBMTL_S.TTF');
@@ -12,6 +10,23 @@
     font-family: 'albertus-black'; 
     src: url('../../webfonts/albertus/ALXB__UB.TTF'); 
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../webfonts/montserrat/Montserrat-Medium.ttf');
+}   
+@font-face {
+    font-family: 'Montserrat-light';
+    src: url('../../webfonts/montserrat/Montserrat-Light.ttf');
+}   
+@font-face {
+    font-family: 'Montserrat-bold';
+    src: url('../../webfonts/montserrat/Montserrat-Bold.ttf');
+}   
+@font-face {
+    font-family: 'Montserrat-semiBold';
+    src: url('../../webfonts/montserrat/Montserrat-SemiBold.ttf');
+}   
 
 
 html{
@@ -61,6 +76,47 @@ body{
 }
 
 
+.upContainer{
+    background: rgba(255,255,255, 0.15);
+    position: fixed;
+    right: 0vw;
+    bottom: 6vw;
+    padding: 0;
+    z-index: 999;
+    cursor: pointer;
+    width: 6vw;
+    height:  6vw;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -ms-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.upContainer.shown{
+    opacity: 1;
+    pointer-events: all;
+    -webkit-transition: opacity 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in;
+    -ms-transition: opacity 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+}
+#upBtn{
+    width: 100%;
+}
+    @media (max-width: 576px) {
+        .upContainer{
+            width: 15vw;
+            height:  15vw;
+        }
+    }
+
+
+
 /*  ------------------------------------------  */
                 /*NAV STYLES*/
 /*  ------------------------------------------  */
@@ -93,7 +149,7 @@ nav{
     color: #a9aeb2;
 }
 .nav-item.active a{
-    color: #475258;]
+    color: #475258;
 }
 
 .sub-nav{
@@ -210,11 +266,17 @@ nav{
     background-color: #931f7a;    
     color: #f7c6a1;
     padding: 3vw 8vw;
-    text-align: center;
+    text-align: justify;
     font-size: 1.1em;
     font-family: "Montserrat";
 }
+.main-info .title{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2vw;
+}
 .main-info span{
+    font-family: "Montserrat-bold";
     font-size: 1.5em;
     letter-spacing: 3px;
     font-weight: bold;
@@ -280,7 +342,7 @@ nav{
     padding: 3vw;
 }
 #bgParallax2{
-  width: 100%;
+  width: 90%;
 }
 
 .sedes-menu-block{
@@ -296,8 +358,8 @@ nav{
 }
 .sedes-menu-element img{
     width: 65%;
-    -webkit-filter: brightness(50%); 
-    filter: brightness(50%);
+    -webkit-filter: brightness(65%); 
+    filter: brightness(65%);
 }
 .sedes-menu-element img:hover{
     cursor: pointer;
@@ -308,6 +370,7 @@ nav{
     -webkit-filter: brightness(100%); 
     filter: brightness(100%);
     width: 75%;
+    box-shadow: 0px 2px 20px 5px rgba(158, 202, 237,0.75), inset 0px 0px 80px 5px rgba(158, 202, 237,0.75);
 }
     @media (max-width: 992px) {
         .bgParallaxContent2{
@@ -315,6 +378,9 @@ nav{
         }
     }
     @media (max-width: 576px) {
+        .sedes-menu-element{
+            margin-top: 5vw;
+        }
         .parallaxWindow2 {
             height: 30vw;
         }
@@ -340,8 +406,8 @@ nav{
 .window-menu-element{
     padding-top:  3.5vw;
     font-weight: bold;
-    font-size: 2vw;
-    font-family: 'albertus-medium';
+    font-size: 1.8vw;
+    font-family: 'Montserrat';
     letter-spacing: 3.5px;
 }
 .window-menu-element div{
@@ -411,7 +477,8 @@ nav{
 /*  ------------------------------------------  */
 .info-window{
     background-color: rgba(0,0,0, 0.4);
-    border-radius: 3px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     margin-top: 0;    
     padding: 3vw;
 }
@@ -420,12 +487,12 @@ nav{
     margin: auto;
     margin-top: -8vw;
     width: 70%;
-    background-image: url('../../img/calaveras/placaSede.png');
+    background-image: url('../../img/calaveras/plecaSede.png');
     background-size: 100% 100%;
     padding: 2vw 0 3vw 0;
     text-align: center;
     font-size: 2.5em;
-    font-weight: bold;
+    font-family: "Montserrat-semiBold";
     color: #552962;
     -webkit-filter: brightness(95%);
     filter: brightness(95%);
@@ -445,6 +512,10 @@ nav{
 .separator hr{
     border-top: 2px solid #f7c6a1;
 }
+.separator li{
+    margin-bottom: 1vw;
+    text-align: justify;
+}
     @media (max-width: 769px) {
         .sedeTitle{
             font-size: 2em;
@@ -461,6 +532,10 @@ nav{
             font-size: 1.8em;
             line-height: 1em;
             padding: 2vw 0 5vw 0;
+        }
+        .separator{
+            padding: 1vw 10vw 1vw 5vw;
+            margin-bottom: 2.5vw;
         }
     }
 
@@ -573,15 +648,15 @@ nav{
         -webkit-transition: height .5s;
         transition: height .5s;
 }
-.actividad{
+.act-content{
     background-image: url('../../img/calaveras/wall2.png');
-    background-size:contain;
+    background-repeat: repeat;
+}
+.actividad{
     color: #000;
     padding: 1.5vw 1.5vw;
     font-weight: 500;
     margin-bottom: 1.5vw;
-    height: 35vw;
-    overflow: auto;
 }
 
 .act-nombre{
@@ -648,7 +723,6 @@ nav{
     @media (max-width: 992px) {
         .actividad{
             font-weight: 900;
-            height: 50vw;
         }
         .act-body{
             max-height: 15vw;
@@ -669,7 +743,7 @@ nav{
             width: 10%;
         }
         .collapsible {
-            height: 17vw;
+            height: 20vw;
             font-size: 1.3em;
         }
         .collapsible img{
@@ -677,7 +751,6 @@ nav{
         }
         .actividad{
             font-weight: 900;
-            height: 60vw;
         }
         .act-header{
             font-size: 1.4em;
@@ -750,12 +823,15 @@ nav{
     }
     @media (max-width: 576px) {
         .parallaxWindow3 {
-            height: 22vw;
+            height: 30vw;
         }
         .bgParallaxContent3 {
-            height: 22vw;
+            height: 30vw;
             font-size: 1.2em;
             padding: 5vw;
+        }
+        #bgParallax3    {
+            width: 200%;
         }
     }
 
@@ -799,7 +875,7 @@ nav{
     @media (max-width: 576px) {
         .footer-ayr{
             text-align: center;
-            padding: 5vw;
+            padding: 10vw;
         }
     }
 
@@ -851,7 +927,7 @@ nav{
             width: 300vw;
         }
         .footer-gob .sub-div{
-            padding: 4vw 10vw 4vw 10vw;
+            padding: 5vw 15vw 5vw 15vw;
         }
         .footer-gob1 div{
             margin-bottom: 8vw;

@@ -1,8 +1,4 @@
-//this code is from https://gist.github.com/mpetroff/4666657beeb85754611f */
-//toggle menu without jquery
 // Obtiene ubicación del usuario
-
-
 // Ubicacion usuario
 function distance(lon1, lat1, lon2, lat2) {
     let R = 6371; // Radio de la tierra en km
@@ -21,8 +17,8 @@ if (typeof(Number.prototype.toRad) === "undefined") {
       return this * Math.PI / 180;
     }
 }
-  
-  navigator.geolocation.getCurrentPosition(function(pos) {
+
+navigator.geolocation.getCurrentPosition(function(pos) {
     //   CENART
       let cnaLat= 19.356584
       let cnaLon =-99.1420677
@@ -48,8 +44,9 @@ if (typeof(Number.prototype.toRad) === "undefined") {
         <
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ){  
-        sedeSelected = "cenart"
-        console.log("Estas cerca del Cenart",sedeSelected)
+        console.log("Estas cerca del Cenart")
+        sedeSelected = 'cenart';
+        executeChange();
     }else if(
         distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
         <
@@ -65,6 +62,8 @@ if (typeof(Number.prototype.toRad) === "undefined") {
     ){
         
         console.log("Estas cerca de los Pinos")
+        sedeSelected = 'pinos';
+        executeChange();
     }else if(
         distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
         <
@@ -79,6 +78,8 @@ if (typeof(Number.prototype.toRad) === "undefined") {
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ){
         console.log("estas cerca de la central de abastos")
+        sedeSelected = 'central';
+        executeChange();
     }else if(
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
         <
@@ -93,10 +94,16 @@ if (typeof(Number.prototype.toRad) === "undefined") {
         distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
     ){
         console.log("Estas cerca de Ecatepec")
+        sedeSelected = 'ecatepec';
+        executeChange();
     }
     
 });
 
+
+
+//this code is from https://gist.github.com/mpetroff/4666657beeb85754611f */
+//toggle menu without jquery
 let collapseElements = document.querySelectorAll('[data-toggle="collapse"]');
 const CLASS_SHOW = 'show';
 const CLASS_COLLAPSE = 'collapse';

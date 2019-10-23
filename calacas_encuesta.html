@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="icon" type="image/png" href="img/calaveras/favico.png">
+
+        <title>Encuesta de Satisfacción</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+
+        <link rel="stylesheet" href="css/calaveras/style.css">
+        <link rel="stylesheet" href="css/calaveras/encuesta_style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" id="navgar-toggler-button" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <div class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <!-- <button class="btn btn-dark accessible-button"><a href="calaveras_accesibilidad.html"><i class="fas fa-lg fa-wheelchair"></i> &nbsp; Accesiblidad</a></button> -->
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.alasyraices.gob.mx/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.alasyraices.gob.mx/quienessomos.html">nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.alasyraices.gob.mx/aplicaciones.html">aplicaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.alasyraices.gob.mx/ebooks.html">e-books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.alasyraices.gob.mx/cartelera10.html">cartelera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="col-12 sub-nav">
+            <img src="img/calaveras/ayrcalacas.png" class="align-top" alt="Logo de alas y raices">
+        </div>
+
+        <div class="container-fluid noPadd">
+            <form id="myPoll">
+                <div class="col-sm-10 offset-sm-1 pollContainer">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="media" class="question">1.- ¿Cómo supiste de nustra página?</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="checkbox" name="media" value="internet">Por internet</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="checkbox" name="media" value="periodico">Por periódico</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="checkbox" name="media" value="radio">Por radio</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="checkbox" name="media" value="redes">Por las redes sociales</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="success" class="question">2.- ¿Encontraste lo que buscabas?</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="success" value="si"> Si</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="success" value="no"> No</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="contents" class="question">3.- ¿Qué contenidos preferirías encontrar en esta página?</label> 
+                        </div>
+                        <div class="col-sm-12">
+                           <label><input type="checkbox" name="contents" value="ferias">a) Ferias y Festivales en sedes en la ciudad de México y el resto del país</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <label><input type="checkbox" name="contents" value="juegos">b) Juegos y actividades en línea</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <label><input type="checkbox" name="contents" value="info actividades">c) Información sobre las actividades de la Coordinación Nacional de Desarrollo Cultural Infantil – Alas y Raíces</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <label><input type="checkbox" name="contents" value="info padres">d) Información para padres de familia sobre crianza y derechos de los niños</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <label><input type="checkbox" name="contents" value="info capacitacion">e) Información sobre capacitación para promoción cultural</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="age" class="question">4.- ¿Qué edad tienes?</label>         
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="6-12">a) Entre 6 y 12 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="13-17">b) Entre 13 y 17 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="18-29">c) Entre 18 y 29 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="30-39">d) De 30 a 39 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="40-49">e) De 40 a 49 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="50-59">f) De 50 a 59 años</label>             </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="age" value="60">g) 60 años en adelante</label>             </label>
+                        </div>
+                    </div>                
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="childs" class="question">5.- Si eres padre o madre de familia, ¿Cuántos hijos tienes?</label> 
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childs" value="1">a) Uno </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childs" value="2">b) Dos </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childs" value="3">c) Tres </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childs" value="4+">d) Más de tres </label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="childAge" class="question">6.- ¿Qué edades tienen tus hijos?</label> 
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childAge" value="0-6">a) Entre 0 a 6 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childAge" value="6-12">b) Entre 6 a 12 años </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="childAge" value="14-17">c) Entre 13 a 17 años </label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="device" class="question">7.- ¿Cómo ingresaste a nuestra página?</label> 
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="device" value="celular">a) Por medio de mi celular </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="device" value="tablet">b) Por medio de una tablet </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="device" value="computadora">c) Por medio de una computadora </label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="register" class="question">8.- ¿Quieres recibir información sobre las actividades, carteleras, programación de ferias y festivales de Alas y Raíces?</label> 
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="register" value="si">a) Si </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <label><input type="radio" name="register" value="no">b) No </label>
+                        </div>
+                        <div class="col6">
+                            <div id="mailDiv" style="display:none"><label for="mail">Proporcionanos tu correo electrónico </label> <input type="mail" name="mail"> </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-3">
+                            <button class="btn btn-block btn-info" type="button" id="submitBtn">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </form> 
+        
+            <div class="row footer">
+                <div class="col-12 footer-ayr">
+                    <div class="row">
+                        <div class="col-sm-4 sub-div">
+                            <span>Estamos en:</span> <br><br>
+    
+                            <a href="https://www.google.com.mx/maps/place/Secretar%C3%ADa+de+Cultura/@19.4308637,-99.1607373,21z/data=!4m5!3m4!1s0x0:0x581dc9dfb95e46b8!8m2!3d19.4309837!4d-99.1606557?shorturl=1">
+                                Av. Paseo de la Reforma 175, piso 5
+                                Col. Renacimiento, Alc. Cuauhtémoc
+                                C.P. 06500, Ciudad de México, México
+                            </a> <br><br>
+                            
+                            Teléfono: <a href="4155-0200">4155-0200 ext 9320</a> <br>
+                            correo-e: <a href="alasyraices@cultura.gob.mx">alasyraices@cultura.gob.mx</a>
+                        </div>
+                        <div class="col-sm-4 sub-div"> 
+                            <a href="https://www.alasyraices.gob.mx/"> <img src="img/ayr2.png" alt="Logo alas y raíces" /> </a><br>
+                                Derechos reservados © Secretaría de Cultura,
+                                Coordinación Nacional de Desarrollo Cultural Infantil,
+                                Programa nacional Alas y Raíces, México, 2019.
+                        </div>
+                        <div class="col-sm-4 sub-div">
+                            Síguenos en nuestras redes: <br> <br>
+                            <a href="https://www.facebook.com/alasyraicescultura/"> <i class="fab fa-2x fa-facebook-f"></i> </a> &nbsp;
+                            <a href="https://twitter.com/alasyraices"> <i class="fab fa-2x fa-twitter"></i> </a> &nbsp;
+                            <a href="https://www.instagram.com/alasyraicescultura/"> <i class="fab fa-2x fa-instagram"></i> </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 footer-gob">
+                    <img src="img/fondofooter.png" alt="" id="pleca-gob">
+                    <div class="row">
+                        <div class="col-sm-3 sub-div footer-gob1">
+                            <div>
+                                <a href="https://www.gob.mx/"> <img src="img/logoheader.svg" alt="logo gobierno mx" /> </a>
+                            </div>
+                            <div>
+                                <a href="https://www.gob.mx/cultura/"> <img src="img/logo-cultura.svg" alt="logo secretaria de cultura" /> </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 sub-div footer-gob2">
+                            <span>Enlaces</span><br><br>
+                            <p>
+                                <a href="https://www.participa.gob.mx/">Participa</a> <br>
+                                <a href="https://www.gob.mx/publicaciones">Publicaciones oficiales</a> <br>
+                                <a href="http://www.ordenjuridico.gob.mx/">Marco Jurídico</a> <br>
+                                <a href="https://www.plataformadetransparencia.org.mx/web/guest/inicio">Plataforma Nacional de Transparencia</a>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-3 sub-div footer-gob3">
+                            <span>¿Qué es gob.mx?</span><br><br>
+                            <p>
+                                Es el portal único de trámites, información y participación ciudadana. <a href="https://www.gob.mx/que-es-gobmx">Leer más</a>
+                            </p>
+
+                            <p>
+                                <a href="https://datos.gob.mx/">Portal de datos abiertos</a><br>
+                                <a href="https://www.gob.mx/accesibilidad">Declaración de accesibilidad</a><br>
+                                <a href="https://www.gob.mx/privacidadintegral">Aviso de privacidad integral</a><br>
+                                <a href="https://www.gob.mx/privacidadsimplificado">Aviso de privacidad simplificado</a><br>
+                                <a href="https://www.gob.mx/terminos">Términos y condiciones</a><br>
+                                <a href="https://www.gob.mx/terminos#medidas-seguridad-informacion">Política de seguridad</a><br>
+                                <a href="https://www.gob.mx/sitemap">Mapa del sitio</a>
+                            </p>
+                        </div>
+
+                        <div class="col-sm-3 sub-div footer-gob4">
+                            <span> <a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54">Denuncia contra servidores públicos</a></span><br><br>
+                            <p>
+                                Síguenos en: <br>
+                                <a href="https://www.facebook.com/gobmexico/"><i class="fab fa-2x fa-facebook-f"></i></a> &nbsp;&nbsp;
+                                <a href="https://twitter.com/GobiernoMX"><i class="fab fa-2x fa-twitter"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" id="successDiv">
+            <div class="col-10 offset-1 col-sm-6 offset-sm-3 something">
+                Hola
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const form = document.getElementById('myPoll');
+        const submitBtn = document.getElementById('submitBtn');
+
+        const registerRadio = document.getElementsByName("register");
+        const mailDiv = document.getElementById('mailDiv');
+        const successDiv = document.getElementById('successDiv');
+        
+        const postUrl = 'http://localhost/ayrApi/public/';
+        var xhr = new XMLHttpRequest();
+
+        successDiv.addEventListener("click", () => {
+            successDiv.style.display = "none";
+        });
+        submitBtn.addEventListener("click", () => {
+            if( testAnswers() ){
+                submitForm();
+            }
+            else{
+                successDiv.children[0].innerHTML = "¡Debes responder almenos una pregunta!";
+                successDiv.style.display = "block";
+            }            
+        })
+        registerRadio.forEach( (radio) => {
+            radio.addEventListener("click", () => {
+                if( registerRadio[0].checked ){
+                    mailDiv.style.display = "block";
+                } else {
+                    mailDiv.style.display = "none";
+                }     
+            });       
+        });
+        
+
+        function submitForm(){
+            fetch(postUrl, {
+                method: "POST",
+                body: JSON.stringify({
+                    "media": getSelectedData("media"),
+                    "success" : getSelectedData("success"),
+                    "contents" : getSelectedData("contents"),
+                    "age" : getSelectedData("age"),
+                    "childs" : getSelectedData("childs"),
+                    "childAge" : getSelectedData("childAge"),
+                    "device" : getSelectedData("device"),
+                    "register" : getSelectedData("register"),
+                    "mail" : document.getElementsByName("mail")[0].value,
+                }),         
+            }).then(res => {
+                if(res.status !== 200){
+                    console.log('Looks like there was a problem. Status Code: ' + res.status);
+                    successDiv.children[0].innerHTML = "¡Parece que hay un problema con el servidor, vuelve a intentarlo mas tarde!";
+                    successDiv.style.display = "block";
+                    return;
+                }
+
+                // Examine the text in the response
+                // res.text().then(function (text) {
+                //     console.log(text);
+                // });
+                res.json().then( data => {
+                    console.log(data);
+                });
+                successDiv.children[0].innerHTML = "¡Gracias por tu valiosa respuesta a nuestra encuesta de satisfacción!";      
+                successDiv.style.display = "block";
+                submitBtn.disabled = true;          
+            }).catch((err) => {
+                console.log('Fetch Error :-S: ', err);
+                successDiv.children[0].innerHTML = "¡Parece que hay un problema con el servidor, vuelve a intentarlo mas tarde!";
+                successDiv.style.display = "block";
+            });
+        }
+            function getSelectedData(field){
+                let fieldData = '';
+
+                //iterate array options
+                (document.getElementsByName(field)).forEach( (element) => {
+                    if(element.checked){
+                        fieldData += element.value+'/';
+                    }
+                });
+
+                return fieldData;
+            }
+            function testAnswers(){
+                let isAnswerOk = false;
+                let arrayFields = ["media", "success", "contents", "age", "childs", "childAge", "device", "register"];
+                
+                arrayFields.forEach( elm => {
+                    if( getSelectedData(elm) !== ""){
+                        isAnswerOk = true;
+                        return isAnswerOk
+                    }    
+                });
+
+                return isAnswerOk;
+            }
+
+    </script>
+
+</html>

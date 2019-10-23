@@ -1,0 +1,151 @@
+.calacasLogo {
+    position: relative;
+    margin: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    width: 30%;
+}
+.mainContainer {
+    background-image: url('../../img/calaveras/parallax.jpg');
+    background-size: 100%;
+}
+
+.main-info{
+    background-image: none; 
+    background-color: rgba(77, 17, 64, 0.7);
+    padding: 2vw 5vw;
+    font-size: 1.1em;
+}
+.main-info span{
+    font-size: 1.3em;
+}
+.acc-block-2{
+    background-color: rgba(0,0,0,0.7);
+}
+.sedes-menu-element{
+    text-align: center;
+    padding: 2vw 0;
+}
+.sedes-menu-element a{
+    color: #f7c6a1;
+}
+.sedes-menu-element a img{
+    -webkit-filter: brightness(100%); 
+    filter: brightness(100%);
+}
+.acc-block-3{
+    background-color: #310b3e;
+}
+.acc-sedes-info{
+    background-image: url('../../img/calaveras/mainWallpaper.png');
+    background-size: repeat;
+    background-attachment: fixed;
+}
+.acc-info-block{
+    padding: 2vw;
+    background: rgba(0,0,0, 0.7);
+    border-radius: 5px;
+    margin-top:1.5vw;
+    margin-bottom:1.5vw;
+    color: #f7c6a1;
+}
+
+.acc-info-block .link{
+    color: #00acaf;
+}
+.acc-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+.acc-title a.sub{
+    font-size: 0.6em;
+}
+.acc-direccion{
+    padding: 2vw;
+    border: solid 1px rgba(255,255,255, 0.5);
+    border-radius: 5px;
+    font-size:  1.1em;
+}
+.acc-horario{
+    text-align: center;
+    padding: 2vw;
+    font-size: 1.2em;
+}
+
+
+.acc-actividad-header {
+    display: flex;
+    align-items: center;
+    height: 7vw;
+    background-color: #59144a;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.acc-actividad-header img{
+    width: 7vw;
+}
+.acc-actividad-header ~ .acc-actividad-header{
+    border-radius: 0px;
+}
+.acc-actividad-header.odd{
+    justify-content: flex-start;
+}
+.acc-actividad-header.even{
+    justify-content: flex-end;
+}
+
+.footer-ayr{
+    margin-top: 0;
+}
+
+    @media (max-width: 576px) {
+        .acc-block-1{
+            height: 70vw;
+        }
+        #calacasLogo {
+            position: relative;
+            margin: auto;
+            margin-top: 25vw;
+            margin-bottom: 4vw;
+            width: 50%;
+            left: 22vw !important;
+        }
+        .main-info{
+            background-image: none; 
+            background-color: rgba(77, 17, 64, 0.95);
+            padding: 5vw 10vw;
+        }
+        .main-info span{
+            font-size: 1.2em;
+        }
+        .acc-block-2{
+            background-color: rgba(0,0,0,0.8);
+            padding: 5vw 2vw;
+        }
+        .acc-info-block{
+            padding: 10vw;
+            background: rgba(0,0,0, 0.7);
+            border-radius: 5px;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            color: #f7c6a1;
+        }
+        .acc-actividad-header {
+            display: flex;
+            align-items: center;
+            height: 20vw;
+            background-color: #59144a;
+            color: white;
+            cursor: pointer;
+            font-size: 1.5em;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+        .acc-actividad-header img{
+            width: 18vw;
+        }
+    }
