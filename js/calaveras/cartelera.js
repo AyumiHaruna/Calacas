@@ -613,20 +613,6 @@ const cartelera = {
                 },
             },
         },
-        "videos":{
-            // "1":{
-            //     "nombre": "Feria de las calacas 2018",
-            //     "url": "https://www.youtube.com/watch?v=yPXUyucEOMg",
-            // },
-            // "2":{
-            //     "nombre": "XVI Feria de las Calacas de Alas y Raíces",
-            //     "url": "https://www.youtube.com/watch?v=FpzX8JpTHLI",
-            // },
-            // "3":{
-            //     "nombre": "Feria de las calacas 2015",
-            //     "url": "https://www.youtube.com/watch?v=qbKAQHzK8aw",
-            // },
-        }
     },
     "pinos": {
         "sede": "Los Pinos",
@@ -926,20 +912,6 @@ const cartelera = {
 
             },
         },
-        "videos":{
-            // "1":{
-            //     "nombre": "Feria de las calacas 2018",
-            //     "url": "https://www.youtube.com/watch?v=yPXUyucEOMg",
-            // },
-            // "2":{
-            //     "nombre": "XVI Feria de las Calacas de Alas y Raíces",
-            //     "url": "https://www.youtube.com/watch?v=FpzX8JpTHLI",
-            // },
-            // "3":{
-            //     "nombre": "Feria de las calacas 2015",
-            //     "url": "https://www.youtube.com/watch?v=qbKAQHzK8aw",
-            // },
-        }
     },
     "central": {
         "sede": "Central de abasto",
@@ -1157,20 +1129,6 @@ const cartelera = {
                 },
             },
         },
-        "videos":{
-            // "1":{
-            //     "nombre": "Feria de las calacas 2018",
-            //     "url": "https://www.youtube.com/watch?v=yPXUyucEOMg",
-            // },
-            // "2":{
-            //     "nombre": "XVI Feria de las Calacas de Alas y Raíces",
-            //     "url": "https://www.youtube.com/watch?v=FpzX8JpTHLI",
-            // },
-            // "3":{
-            //     "nombre": "Feria de las calacas 2015",
-            //     "url": "https://www.youtube.com/watch?v=qbKAQHzK8aw",
-            // },
-        }
     },
     "ecatepec": {
         "sede": "Deportivo “Alfredo del Mazo”",
@@ -1376,19 +1334,26 @@ const cartelera = {
                 },
             },
         },
-        "videos":{
-            // "1":{
-            //     "nombre": "Feria de las calacas 2018",
-            //     "url": "https://www.youtube.com/watch?v=yPXUyucEOMg",
-            // },
-            // "2":{
-            //     "nombre": "XVI Feria de las Calacas de Alas y Raíces",
-            //     "url": "https://www.youtube.com/watch?v=FpzX8JpTHLI",
-            // },
-            // "3":{
-            //     "nombre": "Feria de las calacas 2015",
-            //     "url": "https://www.youtube.com/watch?v=qbKAQHzK8aw",
-            // },
-        }
+    }
+}
+
+const resources = {
+    "videos": {
+        "1":{
+            "nombre": `XIX Feria de las calacas`,
+            "url": "https://www.alasyraices.gob.mx//mm/feriacalcas.mp4",
+        },
+        "2":{
+            "nombre": `"Gubidxa guxana guidxilayú” (“La madre sol parió el mundo”)`,
+            "url": "https://www.youtube.com/watch?v=AsTdVuhsKww",
+        },
+        "3":{
+            "nombre": `El alma del viejo Gregorio. Cuento. La Pandilla Radiofónica`,
+            "url": "https://www.youtube.com/watch?v=4_BfC9BvndA",
+        },
+        "4":{
+            "nombre": `Fandangos por la Lectura. Homenaje a la escritora Laura Méndez de Cuenca`,
+            "url": "https://www.youtube.com/watch?v=GucsAJU--uo",
+        },
     }
 }

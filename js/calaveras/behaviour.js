@@ -92,7 +92,7 @@ window.addEventListener('scroll', () => {
 })
 
 upBtn.addEventListener("click", () => {
-    window.scrollTo(0,100);
+    window.scrollTo(0,0);
 })
 
 
@@ -160,7 +160,7 @@ function drawInfo(action){
         toPrint = `
         <div class="sedeTitle">
             ${data.sede}  <br>
-            <span class="subtitle">(Información General)</span>
+            <span class="subtitle">(Recomendaciones)</span>
         </div>
         <div class="row infoBlock">
             <div class="col-lg-6 text-center mainInfoContainer">
@@ -188,6 +188,21 @@ function drawInfo(action){
             </div>
             <div class="col-12 separator">
                 <hr>
+                <b>Recomendaciones</b>
+                <ul>
+                    <li>Trae calzado y ropa cómodos, ¡hay mucha feria por recorrer!</li>
+                    <li>La programación de las cuatro sedes está sujeta a cambios sin previo aviso. Te recomendamos consultar el programa general cuidadosamente. Recuerda que el cupo en algunas actividades es limitado. Llega con anticipación, revisa y elige aquellas actividades en las que el niño o niña puedan participar, y espera ordenadamente. Si no lograron entrar a alguna actividad, pueden esperar la siguiente sesión, para saberlo, consulta el programa de mano para saber la duración de cada evento.</li>
+                    <li>En todas las sedes, recomendamos que los niños y niñas se mantengan siempre bajo la supervisión de un adulto.</li>
+                    <li>Lleva gorra o sombreros para cubrirte del sol. En todas las sedes, excepto en el Complejo Cultural Los Pinos, es posible entrar con paraguas o sombrillas.</li>
+                    <li>Puedes usar carriolas en todas las sedes, pero en el Centro Cultural Los Pinos, se recomienda no usarla sobre las áreas verdes ni en los espacios que tengan duela. Sigue las indicaciones del personal de seguridad y de los guías sobre el modo y lugar para estacionarlas afuera de las carpas de actividades. </li>
+                    <li>Trae tu agua embotellada y alimentos para los bebés o niños más pequeños, según la sede: En Jardines de Morelos, en Ecatepec y Central de Abasto sí se permite el ingreso de alimentos, pero en el Complejo Cultural Los Pinos no se permite consumir alimentos en interiores, tales como la Cabaña o la Sala de lectura, mientras que sólo en el CENART habrá puestos de venta de comida para los visitantes.</li>
+                    <li>Te recomendamos llegar en metro al Centro Cultural Los Pinos, bajando en la estación Constituyentes y caminando hacia la puerta 3, sobre la av. Molino del Rey, hasta llegar a la reja verde, ya que no hay estacionamiento abierto al público.</li>
+                    <li>En el CENART existe un estacionamiento con cupo limitado, ¡toma tus precauciones y llega temprano! El ingreso es sobre Av. Churubusco. </li>
+                    <li>Para llegar a la Central de Abasto puedes tomar un camión en la estación de metro Aculco, que dice “Churubusco, Central de Abasto”. </li>
+                    <li>En la sede de Jardines de Morelos, en Ecatepec, es recomendable llegar a pie a la zona del deportivo desde la estación 1ro de mayo de la línea 2 del Mexibus, que corre de Las Américas a Lechería.</li>
+                    <li>Sigue las indicaciones de las personas auxiliares (identificados por la playera de ALAS y RAÍCES y el gafete). Si tienes alguna duda o necesitas ayuda, ellos están para orientarte y auxiliarte.</li>
+                    <li>Todas las sedes son espacios libres de basura y de basureros. Cada persona deberá hacerse cargo de los residuos que genere, solos o en familia. Agradecemos su colaboración para conservar estos espacios limpios, pues son patrimonio de todos.</li>
+                </ul>
             </div>
         </div>
         `;
@@ -200,28 +215,43 @@ function drawInfo(action){
     function drawVideos(){
         
         var toPrint;
-        var data = cartelera[sedeSelected];
+        var data = resources;
         
         toPrint = `
         <div class="sedeTitle">
-            ${data.sede}  <br>
-            <span class="subtitle">(Live Stream)</span>
+            Live Stream
         </div>
         <div class="row justify-content-md-center infoBlock">`;
 
-
-            for( var key in data.videos){
+            for( var key in data["videos"]){
                 
-                var urlId = (data.videos[key]['url']).replace("https://www.youtube.com/watch?v=", "");
-                toPrint += `
-                    <div class="col-sm-4 text-center vidContainer">
-                        <a href="${data.videos[key]['url']}" target="_blank">
-                            <img src="https://img.youtube.com/vi/${urlId}/mqdefault.jpg" class="youThumb" alt="youtube video"/>
-                            <div>${data.videos[key]['nombre']}</div>
-                        </a>                        
-                        <img src="img/calaveras/yTube.png" class="youPlay" alt="boton play" />                        
-                    </div>
-                `;
+                if( key === "1"){
+                    toPrint += `
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-6 text-center vidContainer">
+                                    <a href="${data.videos[key]['url']}" target="_blank">
+                                        <img src="img/calaveras/videoThumbnail.jpg" class="youThumb" alt="video feria de las calacas"/>
+                                        <div>${data.videos[key]['nombre']}</div>
+                                    </a>                        
+                                    <img src="img/calaveras/yTube.png" class="youPlay" alt="boton play" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                    `;
+                } else {
+                    var urlId = (data.videos[key]['url']).replace("https://www.youtube.com/watch?v=", "");
+                    toPrint += `
+                        <div class="col-sm-4 text-center vidContainer">
+                            <a href="${data.videos[key]['url']}" target="_blank">
+                                <img src="https://img.youtube.com/vi/${urlId}/mqdefault.jpg" class="youThumb" alt="youtube video"/>
+                                <div>${data.videos[key]['nombre']}</div>
+                            </a>                        
+                            <img src="img/calaveras/yTube.png" class="youPlay" alt="boton play" />                        
+                        </div>
+                    `;
+                }
             }
         
             

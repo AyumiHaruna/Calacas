@@ -266,9 +266,14 @@ nav{
     background-color: #931f7a;    
     color: #f7c6a1;
     padding: 3vw 8vw;
-    text-align: center;
+    text-align: justify;
     font-size: 1.1em;
     font-family: "Montserrat";
+}
+.main-info .title{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2vw;
 }
 .main-info span{
     font-family: "Montserrat-bold";
@@ -472,7 +477,8 @@ nav{
 /*  ------------------------------------------  */
 .info-window{
     background-color: rgba(0,0,0, 0.4);
-    border-radius: 3px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     margin-top: 0;    
     padding: 3vw;
 }
@@ -481,7 +487,7 @@ nav{
     margin: auto;
     margin-top: -8vw;
     width: 70%;
-    background-image: url('../../img/calaveras/placaSede.png');
+    background-image: url('../../img/calaveras/plecaSede.png');
     background-size: 100% 100%;
     padding: 2vw 0 3vw 0;
     text-align: center;
@@ -506,6 +512,10 @@ nav{
 .separator hr{
     border-top: 2px solid #f7c6a1;
 }
+.separator li{
+    margin-bottom: 1vw;
+    text-align: justify;
+}
     @media (max-width: 769px) {
         .sedeTitle{
             font-size: 2em;
@@ -522,6 +532,10 @@ nav{
             font-size: 1.8em;
             line-height: 1em;
             padding: 2vw 0 5vw 0;
+        }
+        .separator{
+            padding: 1vw 10vw 1vw 5vw;
+            margin-bottom: 2.5vw;
         }
     }
 
