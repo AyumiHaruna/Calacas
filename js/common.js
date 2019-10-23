@@ -2,6 +2,7 @@
 //toggle menu without jquery
 // Obtiene ubicación del usuario
 
+
 // Ubicacion usuario
 function distance(lon1, lat1, lon2, lat2) {
     let R = 6371; // Radio de la tierra en km
@@ -32,8 +33,8 @@ if (typeof(Number.prototype.toRad) === "undefined") {
       let caLat=19.3740039
       let caLon= -99.0952915
     //   Ecatepec
-      let ecLat=19.5720072
-      let ecLon=-99.1172226
+      let ecLat=19.548244
+      let ecLon=-99.0406098
     if(
         distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
         <
@@ -47,8 +48,8 @@ if (typeof(Number.prototype.toRad) === "undefined") {
         <
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ){  
-        
-        console.log("Estas cerca del Cenart")
+        sedeSelected = "cenart"
+        console.log("Estas cerca del Cenart",sedeSelected)
     }else if(
         distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
         <
@@ -62,6 +63,7 @@ if (typeof(Number.prototype.toRad) === "undefined") {
         <
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ){
+        
         console.log("Estas cerca de los Pinos")
     }else if(
         distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)

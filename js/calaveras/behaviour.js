@@ -18,7 +18,101 @@ const arrayBtnAction = [actionBtnGeneral, actionBtnVideos, actionBtnProgra]
 const infoWindow = document.getElementById('info-window');
 
 // flags
-var sedeSelected = 'central';
+sedeSelected = "cenart"
+
+function distance(lon1, lat1, lon2, lat2) {
+    
+    let R = 6371; // Radio de la tierra en km
+    let dLat = (lat2-lat1).toRad();  // Javascript metodos
+    let dLon = (lon2-lon1).toRad(); 
+    let a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+            Math.sin(dLon/2) * Math.sin(dLon/2); 
+    let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    let d = R * c; // Distancia en km
+    return d;
+}
+  
+if (typeof(Number.prototype.toRad) === "undefined") {
+    Number.prototype.toRad = function() {
+      return this * Math.PI / 180;
+    }
+}
+  
+  navigator.geolocation.getCurrentPosition(function(pos) {
+    //   CENART
+      let cnaLat= 19.356584
+      let cnaLon =-99.1420677
+    //   Los Pinos
+      let pinoLat=19.4156636
+      let pinoLon=-99.1934009
+    //   Central de abasto
+      let caLat=19.3740039
+      let caLon= -99.0952915
+    //   Ecatepec
+      let ecLat=19.548244
+      let ecLon=-99.0406098
+    if(
+        distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat) 
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
+    ){  
+       
+        console.log("Estas cerca del Cenart",)
+    }else if(
+        distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
+    ){
+        
+        console.log("Estas cerca de los Pinos")
+    }else if(
+        distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
+    ){
+        console.log("estas cerca de la central de abastos")
+    }else if(
+        distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, pinoLon, pinoLat)
+        &&
+        distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
+        <
+        distance(pos.coords.longitude, pos.coords.latitude, caLon, caLat)
+    ){
+        console.log("Estas cerca de Ecatepec")
+    }
+    
+});
 
 //parallax background
 const parallax1 = document.getElementsByClassName('bgParallax1');
