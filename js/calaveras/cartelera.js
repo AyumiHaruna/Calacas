@@ -1280,7 +1280,7 @@ const cartelera = {
                     "sinopsis": `De dos a tres caídas con límite de tiempo, una batalla de versos con los más terroríficos de ultratumba: en una esquina La Catrina del bando de los técnicos y en la otra esquina El Patas de Cabra del bando de los rudos.Aquí puedes participar con ellos… ¿Y tú, de qué bando eres`,
                     "area": "Escenario principal",
                     "horario": "17:20 a 18:00 horas",
-                    "publico": "Para toda la familia",
+                    "publico": "toda la familia",
                     "observaciones": "",
                     "delegacion": "" ,
                 },
