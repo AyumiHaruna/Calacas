@@ -29,8 +29,8 @@ navigator.geolocation.getCurrentPosition(function(pos) {
       let caLat=19.3740039
       let caLon= -99.0952915
     //   Ecatepec
-      let ecLat=19.5720072
-      let ecLon=-99.1172226
+      let ecLat=19.548244
+      let ecLon=-99.0406098
     if(
         distance(pos.coords.longitude, pos.coords.latitude, cnaLon, cnaLat)
         <
@@ -60,6 +60,7 @@ navigator.geolocation.getCurrentPosition(function(pos) {
         <
         distance(pos.coords.longitude, pos.coords.latitude, ecLon, ecLat)
     ){
+        
         console.log("Estas cerca de los Pinos")
         sedeSelected = 'pinos';
         executeChange();
