@@ -30,15 +30,15 @@ const parallax3 = document.getElementsByClassName('bgParallax3');
 
 //elements to fix mainLogo on scroll
 const calacasLogo = document.getElementById("calacasLogo");
-const mainInfoWindow = document.getElementById('main-info');
-const mainInfoHeight = mainInfoWindow.offsetHeight;
-const mainInfoYTop = mainInfoWindow.getBoundingClientRect().top;
+const flagDivWindow = document.getElementById('bgParallaxContent');
+const flagDivHeight = flagDivWindow.offsetHeight;
+const flagDivYTop = flagDivWindow.getBoundingClientRect().top;
 
 
 //----------------------------------------------
             //INITIAL STATE
 //----------------------------------------------   
-    calacasLogo.style.opacity = (mainInfoHeight - document.documentElement.scrollTop) / mainInfoHeight;
+    calacasLogo.style.opacity = (flagDivYTop - document.documentElement.scrollTop) / flagDivYTop;
     executeChange();
 
 //----------------------------------------------
@@ -78,7 +78,7 @@ arrayBtnAction.forEach( (elm) => {
 });
 
 window.addEventListener('scroll', () => {
-        calacasLogo.style.opacity = (mainInfoHeight - document.documentElement.scrollTop) / mainInfoHeight;
+        calacasLogo.style.opacity = (flagDivHeight - document.documentElement.scrollTop) / flagDivHeight;
 
         if(document.documentElement.scrollTop >= 200){
             if( !upBtn.parentElement.classList.contains("shown") ){
