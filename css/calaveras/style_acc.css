@@ -16,6 +16,10 @@
     padding: 2vw 5vw;
     font-size: 1.1em;
 }
+.main-info div{
+    text-align: center;
+    margin-bottom: 2vw;
+}
 .main-info span{
     font-size: 1.3em;
 }
@@ -33,13 +37,16 @@
     -webkit-filter: brightness(100%); 
     filter: brightness(100%);
 }
-.acc-block-3{
-    background-color: #310b3e;
+.pre-acc-block-3{
+    background: #000;    
 }
-.acc-sedes-info{
+.acc-block-3{    
     background-image: url('../../img/calaveras/mainWallpaper.png');
     background-size: repeat;
     background-attachment: fixed;
+}
+.acc-sedes-info{
+    background-color: rgba(49, 11, 62, 0.8);
 }
 .acc-info-block{
     padding: 2vw;
@@ -97,6 +104,26 @@
 .acc-actividad-header.even{
     justify-content: flex-end;
 }
+
+.acc-recomendaciones{
+    background: rgba(62, 11, 11, 0.8);
+    color: #f7c6a1;
+    padding: 3vw 0;
+}
+.acc-recomendaciones .title{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 2vw;
+}
+.acc-recomendaciones .body{
+    padding: 0 5vw;
+    text-align: justify;
+}
+.acc-recomendaciones .body li{
+    margin-bottom: 1.2vw;
+}
+
 
 .footer-ayr{
     margin-top: 0;
