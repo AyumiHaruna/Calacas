@@ -175,4 +175,18 @@
         .acc-actividad-header img{
             width: 18vw;
         }
+
+
+        .acc-recomendaciones{
+            padding: 10vw 15vw 10vw 5vw;
+        }
+        .acc-recomendaciones .title{
+            margin-bottom: 4vw;
+        }
+        .acc-recomendaciones .body{
+            padding: 0 0;
+        }
+        .acc-recomendaciones .body li{
+            margin-bottom: 2vw;
+        }
     }
